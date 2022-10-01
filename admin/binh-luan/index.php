@@ -1,0 +1,21 @@
+<?php
+    require "../../global.php";
+    require_once '../../dao/pdo.php';
+    require_once '../../dao/binh-luan.php';
+    require_once '../../dao/thong-ke.php';
+    extract($_REQUEST);
+    
+    if(exist_param("ma_hh", $_REQUEST)) {
+        $items_bl = bl_select_by_hh($ma_hh);
+        $VIEW_NAME = 'detail.php';
+    } elseif(exist_param("btn_delete")) {
+        bl_delete($ma_bl);
+        $items_bl = bl_selectAll();
+        $VIEW_NAME = 'detail.php';
+    }  else {
+        $items_bl = thong_ke_binh_luan();
+        $VIEW_NAME = 'list.php';
+    }
+
+    require "../layout.php";
+?>

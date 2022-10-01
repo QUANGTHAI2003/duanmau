@@ -1,0 +1,172 @@
+<?php
+require_once '../layout/success.php';
+if (isset($_SESSION['login_success'])) { ?>
+    <script>
+        showLoginSuccessToast();
+    </script>
+<?php unset($_SESSION['login_success']); }  
+
+if (isset($_SESSION['logout_success'])) { ?>
+    <script>
+        showLogOutSuccessToast();
+    </script>
+<?php unset($_SESSION['logout_success']); }  
+
+?>
+
+
+<header class="header">
+    <section class="header-top">
+        <section class="bar">
+            <i class="fa-solid fa-bars menu"></i>
+        </section>
+        <section class="logo main">
+            <a href="./index.php">
+                <img src="<?= $IMAGES_URL ?>/logo.webp" alt="logo">
+            </a>
+        </section>
+        <section class="overlay"></section>
+        <section class="search-box">
+            <form action="#" class="form" role="search">
+                <input type="text" class="form-control search-input" id="input-search" aria-label="Tìm sản phẩm" placeholder="Bạn cần tìm gì?" autocomplete="off" autofocus onblur="this.value = ''">
+                <button type="submit" aria-label="Tìm Kiếm">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="search-suggest">
+                <div id="search-result">
+
+                </div>
+            </div>
+        </section>
+        <section class="more">
+            <section class="user group-account">
+                <i class="fa-solid fa-user-plus"></i>
+                <section class="group">
+                    <span>
+                    </span>
+                    <?php if (isset($_SESSION['email'])) { ?>
+                        <p><?= $_SESSION['username'] ?></p>
+                        <a href="#" class="btn">Tài khoản</a>
+                        <a href="../layout/logout.php" class="btn">Đăng xuất</a>
+                    <?php } else { ?>
+                        <a href="../layout/login-form.php" class="btn">Đăng nhập</a>
+                        <a href="./register.php" class="btn">Đăng ký</a>
+                    <?php } ?>
+                </section>
+            </section>
+            <section class="cart">
+                <section class="cart-item">
+                    <ul class="list-item-cart">
+                        <li class="item-cart">
+                            <img src="./images/18.webp" alt="">
+                            <section class="info-cart">
+                                <section class="name-cart">Vải thiều</section>
+                                <section class="price-qty">
+                                    <section class="price-item-cart">
+                                        40000</section>
+                                    <section class="qty-item-cart">x 1</section>
+                                </section>
+                            </section>
+                        </li>
+                    </ul>
+                    <section class="total">
+                        <div class="total-price">
+                            <section class="total-price">Tổng tiền: </section>
+                            <span>
+                                0
+                            </span>
+                        </div>
+                        <a href="./cart.php" class="btn">Xem giỏ hàng</a>
+                    </section>
+
+                </section>
+
+                <a href="./cart.php">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                    <span>
+                        0
+                    </span>
+                </a>
+            </section>
+        </section>
+    </section>
+    <nav class="nav">
+        <ul class="ul-main">
+            <li><a class="<?php ?>" href="../trang-chinh?trang-chu">Trang Chủ</a></li>
+            <li><a class="" href="../trang-chinh/?gioi-thieu">Giới Thiệu</a>
+            </li>
+            <li>
+                <section class="main-subnav">
+                    <a href="./index.php?san-pham" class="">Sản phẩm</a>
+                    <i class="fa-solid fa-angle-down down"></i>
+                    <ul class="subnav">
+                        <li>
+                            <a href="./SanPham.php">
+                                <i class="fa-solid fa-caret-right"></i>
+                                Tất cả
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./RauCu.php">
+                                <i class="fa-solid fa-caret-right"></i>
+                                Rau củ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./HoaQua.php">
+                                <i class="fa-solid fa-caret-right"></i>
+                                Hoa quả
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./HaiSan.php">
+                                <i class="fa-solid fa-caret-right"></i>
+                                Hải sản
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./CacLoaiHat.php">
+                                <i class="fa-solid fa-caret-right"></i>
+                                Các lọai hạt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./ThucPhamTuoiSong.php">
+                                <i class="fa-solid fa-caret-right"></i>
+                                Thực phẩm tươi sống
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </li>
+            <li><a class="" href="../trang-chinh/?tin-tuc">Tin Tức</a>
+            </li>
+            <li><a class="" href="../trang-chinh/?lien-he">Liên hệ</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+    const searchInput = document.querySelector('.search-input');
+    const showSearch = document.querySelector('.search-suggest');
+    searchInput.addEventListener('focus', function() {
+        showSearch.style.display = 'block';
+    })
+    searchInput.addEventListener('blur', function() {
+        showSearch.style.display = 'none';
+    })
+
+    document.addEventListener('keydown', function(e) {
+        if (e.keyCode == 191) {
+            searchInput.focus();
+            searchInput.value = null;
+        }
+    })
+    document.addEventListener('keyup', function(e) {
+        if (e.keyCode == 191) {
+            searchInput.value = null;
+        }
+    })
+</script>
