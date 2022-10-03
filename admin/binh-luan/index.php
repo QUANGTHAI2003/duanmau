@@ -6,7 +6,7 @@
     extract($_REQUEST);
     
     if(exist_param("ma_hh", $_REQUEST)) {
-        $items_bl = bl_select_by_hh($ma_hh);
+        $items_detail = bl_select_by_hh($ma_hh);
         $VIEW_NAME = 'detail.php';
     } elseif(exist_param("btn_delete")) {
         bl_delete($ma_bl);

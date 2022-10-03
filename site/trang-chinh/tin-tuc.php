@@ -1,13 +1,13 @@
 <section class="background">
-        <div class="content-bg">
-            <h3 class="title-bg">Tin Tức</h3>
-            <p>
-                <span class="bg-title">Trang chủ</span>
-                <i class="fa-solid fa-angle-right"></i>
-                <span class="page">Tin Tức</span>
-            </p>
-        </div>
-    </section>
+    <div class="content-bg">
+        <h3 class="title-bg">Tin Tức</h3>
+        <p>
+            <span class="bg-title">Trang chủ</span>
+            <i class="fa-solid fa-angle-right"></i>
+            <span class="page">Tin Tức</span>
+        </p>
+    </div>
+</section>
 <section class="lastest-news">
     <h2 class="text-gradient">TIN TỨC</h2>
     <div class="lastest-news-container">

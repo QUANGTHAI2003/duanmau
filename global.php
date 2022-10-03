@@ -7,7 +7,9 @@
     $ADMIN_URL = "$ROOT_URL/admin";
     $SITE_URL = "$ROOT_URL/site";
     $IMAGES_URL = "$CONTENT_URL/images";
-    $UPLOAD_URL = "../../upload/";
+    $IMAGES_URL_USER = "$ROOT_URL/upload/users/";
+    $UPLOAD_URL_PRO = "../../upload/product/";
+    $UPLOAD_URL_USER = "../../upload/users/";
     $SL_PER_PAGE = 4;
 
     // ĐỊnh nghĩa đường dẫn chứa ảnh sử dụng trong upload

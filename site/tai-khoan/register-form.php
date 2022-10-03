@@ -26,15 +26,27 @@
                     <div class="content-wthree">
                         <h2>Register Now</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        <form action="" method="post">
-                            <input type="text" class="name" name="ho_ten" placeholder="Enter Your Name" value="" required>
-                            <input type="email" class="email" name="email" placeholder="Enter Your Email" value="" required>
-                            <input type="password" class="password" name="mat_khau" placeholder="Enter Your Password" required>
-                            <input type="password" class="confirm-password" name="mat_khau2" placeholder="Enter Your Confirm Password" required>
+                        <?php require_once '../../global.php' ?>
+                        <?= $msg = ''; $msg ?>
+                        <form action="./register.php" method="POST" enctype="multipart/form-data">
+                            <div class="form-ctn">
+                                <div class="form-left">
+                                    <input type="text" class="name" name="ma_kh" placeholder="Tên đăng nhập" value="">
+                                    <input type="password" class="password" name="mat_khau" placeholder="Mât khẩu">
+                                    <input type="password" class="confirm-password" name="mat_khau2" placeholder="Xác nhận mật khẩu">
+                                </div>
+                                <div class="form-right">
+                                    <input type="text" class="" name="ho_ten" placeholder="Họ và tên">
+                                    <input type="email" class="" name="email" placeholder="Email">
+                                    <input type="file" name="hinh" id="">
+                                </div>
+                            </div>
+                            <input type="hidden" name="vai_tro" value="0">
+                            <input type="hidden" name="kich_hoat" value="0">
                             <button name="register" class="btn" type="submit">Register</button>
                         </form>
                         <div class="social-icons">
-                            <p>Have an account! <a href="login.php">Login</a>.</p>
+                            <p>Have an account! <a href="login-form.php">Login</a>.</p>
                         </div>
                     </div>
                 </div>

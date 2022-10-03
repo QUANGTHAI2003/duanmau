@@ -43,15 +43,13 @@ if (isset($_SESSION['logout_success'])) { ?>
             <section class="user group-account">
                 <i class="fa-solid fa-user-plus"></i>
                 <section class="group">
-                    <span>
-                    </span>
-                    <?php if (isset($_SESSION['email'])) { ?>
+                    <?php if (isset($_SESSION['ma_kh'])) { ?>
                         <p><?= $_SESSION['username'] ?></p>
-                        <a href="#" class="btn">Tài khoản</a>
-                        <a href="../layout/logout.php" class="btn">Đăng xuất</a>
+                        <a href="../tai-khoan/account.php?ma_kh=<?= $_SESSION['ma_kh'] ?>" class="btn">Tài khoản</a>
+                        <a href="../tai-khoan/logout.php" class="btn">Đăng xuất</a>
                     <?php } else { ?>
-                        <a href="../layout/login-form.php" class="btn">Đăng nhập</a>
-                        <a href="./register.php" class="btn">Đăng ký</a>
+                        <a href="../tai-khoan/login-form.php" class="btn">Đăng nhập</a>
+                        <a href="../tai-khoan/register.php" class="btn">Đăng ký</a>
                     <?php } ?>
                 </section>
             </section>
@@ -93,16 +91,16 @@ if (isset($_SESSION['logout_success'])) { ?>
     </section>
     <nav class="nav">
         <ul class="ul-main">
-            <li><a class="<?php ?>" href="../trang-chinh?trang-chu">Trang Chủ</a></li>
-            <li><a class="" href="../trang-chinh/?gioi-thieu">Giới Thiệu</a>
+            <li><a class="<?php ?>" href="<?= $SITE_URL ?>/trang-chinh?trang-chu">Trang Chủ</a></li>
+            <li><a class="" href="<?= $SITE_URL ?>/trang-chinh/?gioi-thieu">Giới Thiệu</a>
             </li>
             <li>
                 <section class="main-subnav">
-                    <a href="./index.php?san-pham" class="">Sản phẩm</a>
+                    <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham" class="">Sản phẩm</a>
                     <i class="fa-solid fa-angle-down down"></i>
                     <ul class="subnav">
                         <li>
-                            <a href="./SanPham.php">
+                            <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham">
                                 <i class="fa-solid fa-caret-right"></i>
                                 Tất cả
                             </a>
@@ -140,9 +138,9 @@ if (isset($_SESSION['logout_success'])) { ?>
                     </ul>
                 </section>
             </li>
-            <li><a class="" href="../trang-chinh/?tin-tuc">Tin Tức</a>
+            <li><a class="" href="<?= $SITE_URL ?>/trang-chinh/?tin-tuc">Tin Tức</a>
             </li>
-            <li><a class="" href="../trang-chinh/?lien-he">Liên hệ</a>
+            <li><a class="" href="<?= $SITE_URL ?>/trang-chinh/?lien-he">Liên hệ</a>
             </li>
         </ul>
     </nav>

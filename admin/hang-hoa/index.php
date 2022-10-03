@@ -13,7 +13,7 @@
         $giam_gia = isset($_POST['giam_gia']) ? $_POST['giam_gia'] : '';
         $ma_loai = isset($_POST['ma_loai']) ? $_POST['ma_loai'] : '';
         $dac_biet = isset($_POST['dac_biet']) ? $_POST['dac_biet'] : '';
-        $mo_ta = isset($_POST['mo_ta']) ? $_POST['mo_ta'] : '';
+        $mo_ta = isset($_POST['mo_ta']) ? $_POST['mo_ta'] : 'Thông tin sản phẩm đang được cập nhật';
         $ngay_nhap = date('d-m-Y');
         $so_luot_xem = 0;
         $hinh = save_file('hinh', $UPLOAD_URL);
@@ -40,7 +40,7 @@
         $hinh = isset($_FILES['hinh']) ? $_FILES['hinh'] : '';
         $ma_loai = isset($_POST['ma_loai']) ? $_POST['ma_loai'] : '';
         $dac_biet = isset($_POST['dac_biet']) ? $_POST['dac_biet'] : '';
-        $mo_ta = isset($_POST['mo_ta']) ? $_POST['mo_ta'] : '';
+        $mo_ta = isset($_POST['mo_ta']) ? $_POST['mo_ta'] : 'Thông tin sản phẩm đang được cập nhật';
         hh_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
         $items_hh = hh_select_page();
         $VIEW_NAME = "list.php";

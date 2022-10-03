@@ -36,7 +36,12 @@
     }
 
     function bl_select_by_hh($ma_hh) {
-        $sql = "SELECT bl.*, hh.ten_hh FROM binh_luan bl JOIN hang_hoa hh ON bl.ma_hh = hh.ma_hh WHERE bl.ma_hh=? ORDER BY ngay_bl DESC";
+        $sql = "SELECT hh.ma_hh, kh.hinh, bl.noi_dung, kh.ho_ten, bl.ngay_bl, kh.ma_kh FROM hang_hoa hh JOIN binh_luan bl ON hh.ma_hh = bl.ma_hh JOIN khach_hang kh ON bl.ma_kh = kh.ma_kh WHERE hh.ma_hh = ? GROUP BY hh.ma_hh, kh.hinh ORDER BY bl.ngay_bl DESC";
         return pdo_query($sql, $ma_hh);
+    }
+
+    function bl_select_by_kh($ma_kh) {
+        $sql = "SELECT ho_ten, hinh, noi_dung, ngay_bl FROM binh_luan bl JOIN khach_hang kh ON bl.ma_kh = kh.ma_kh WHERE bl.ma_kh=? ORDER BY ngay_bl DESC";
+        return pdo_query($sql, $ma_kh);
     }
 ?>

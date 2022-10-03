@@ -183,27 +183,27 @@
                         </button>
                     </li>
                 </ul>
-                <section class="product-grid">
-                    <a href="./detail.php" style="text-decoration:none">
-                        <section class="pro duct-grid-inner">
-                            <article class="product-card mix tesla">
-                                <section class="product-thumbnail">
-                                    <img src="<?= $IMAGES_URL ?>/18.webp" alt="">
-                                </section>
-                                <section class="product-content">
-                                    <h3 class="product-name" style="color: black">Vải thiều
-                                    </h3>
-                                    <section class="product-price">
-                                        <section class="product-new-price price">
-                                            40000
-                                        </section>
-                                        <section class="product-old-price price">50000
+                <section class="product-grids" style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px;">
+                    <?php foreach ($items_home as $home) { ?>
+                        <a href="./detail.php" style="text-decoration:none">
+                            <section class="product-grid-inner">
+                                <article class="product-card mix tesla">
+                                    <section class="product-thumbnail">
+                                        <img src="<?= $IMAGES_URL ?>/<?= $home['hinh'] ?>" alt="">
+                                    </section>
+                                    <section class="product-content">
+                                        <h3 class="product-name" style="color: black"><?= $home['ten_hh'] ?></h3>
+                                        </h3>
+                                        <section class="product-price">
+                                            <section class="product-new-price price">
+                                                <?= number_format($home['don_gia'], 0, ',', '.') . 'đ' ?>
+                                            </section>
                                         </section>
                                     </section>
-                                </section>
-                            </article>
-                        </section>
-                    </a>
+                                </article>
+                            </section>
+                        </a>
+                    <?php } ?>
                 </section>
             </section>
         </section>
@@ -225,28 +225,28 @@
         </section>
         <!-- Best seller section -->
         <section class="product-list">
-            <h2 class="text-gradient">SẢN PHẨM BÁN CHẠY</h2>
-            <section class="product-list-container grids">
-                <a href="./detail.php" style="text-decoration:none">
-                    <section class="pro duct-grid-inner">
-                        <article class="product-card mix tesla">
-                            <section class="product-thumbnail">
-                                <img src="<?= $IMAGES_URL ?>/18.webp" alt="">
-                            </section>
-                            <section class="product-content">
-                                <h3 class="product-name" style="color: black">Vải thiều
-                                </h3>
-                                <section class="product-price">
-                                    <section class="product-new-price price">
-                                        40000
-                                    </section>
-                                    <section class="product-old-price price">50000
+            <h2 class="text-gradient">SẢN PHẨM ĐẶC BIỆT</h2>
+            <section class="product-list-container grids" style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px;">
+                <?php foreach ($items_top as $top) { ?>
+                    <a href="./detail.php" style="text-decoration:none">
+                        <section class="pro duct-grid-inner">
+                            <article class="product-card mix tesla">
+                                <section class="product-thumbnail">
+                                    <img src="<?= $IMAGES_URL ?>/<?= $top['hinh'] ?>" alt="">
+                                </section>
+                                <section class="product-content">
+                                    <h3 class="product-name" style="color: black"><?= $top['ten_hh'] ?></h3>
+                                    </h3>
+                                    <section class="product-price">
+                                        <section class="product-new-price price">
+                                            <?= number_format($top['don_gia'], 0, ',', '.') . 'đ' ?>
+                                        </section>
                                     </section>
                                 </section>
-                            </section>
-                        </article>
-                    </section>
-                </a>
+                            </article>
+                        </section>
+                    </a>
+                <?php } ?>
             </section>
         </section>
         <!-- Lastest news section -->

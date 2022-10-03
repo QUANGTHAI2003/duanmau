@@ -16,23 +16,15 @@
                 <i class="uil uil-clock-three"></i>
                 <span class="text">Comments Management</span>
             </div>
-            <div class="add title">
-                <button class="text openbox">
-                    <a href="./index.php?btn_add">
-                        <i class="uil uil-plus"></i>
-                    </a>
-                </button>
-            </div>
         </div>
 
         <div class="activity-comment">
             <div class="title-comment">
-                <div class="title-pro name"><input type="checkbox" onclick="toogleCheckBox(this)" id=""></div>
                 <div class="title-pro name">Hàng hóa</div>
                 <div class="title-pro image">Số bình luận</div>
-                <div class="title-pro price">Mới nhất</div>
-                <div class="title-pro status">Cũ nhât</div>
-                <div class="title-pro func">&emsp;&emsp;</div>
+                <div class="title-pro price">Bình luận mới nhất</div>
+                <div class="title-pro status">Bình luận cũ nhất</div>
+                <div class="title-pro func">Bình luận chi tiết</div>
             </div>
             <?php
             if (is_array($items_bl) || is_object($items_bl)) {
@@ -40,7 +32,6 @@
                     extract($bl);
             ?>
                     <div class="list-comment">
-                        <div class="name"><input type="checkbox" name="checkBox" value="checkbox<?= $ma_hh ?>" id=""></div>
                         <div class="name"><?= $ten_hh ?></div>
                         <div class="image"><?= $so_luong ?></div>
                         <div class="qty"><?= $moi_nhat ?></div>

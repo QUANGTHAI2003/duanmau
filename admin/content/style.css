@@ -547,7 +547,7 @@ nav.close~.dashboard .top {
 .title-comment,
 .list-comment {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2.6fr 1fr 1.2fr 1.2fr 1fr;
     align-items: center;
 }
 

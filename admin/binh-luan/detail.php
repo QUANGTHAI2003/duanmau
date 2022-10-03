@@ -16,13 +16,6 @@
                 <i class="uil uil-clock-three"></i>
                 <span class="text">Comments Management</span>
             </div>
-            <div class="add title">
-                <button class="text openbox">
-                    <a href="./index.php?btn_add">
-                        <i class="uil uil-plus"></i>
-                    </a>
-                </button>
-            </div>
         </div>
 
         <div class="activity-detail">
@@ -34,8 +27,8 @@
                 <div class="title-pro func">&emsp;&emsp;</div>
             </div>
             <?php
-            if (is_array($items_bl) || is_object($items_bl)) {
-                foreach ($items_bl as $bl) {
+            if (is_array($items_detail) || is_object($items_detail)) {
+                foreach ($items_detail as $bl) {
                     extract($bl);
             ?>
                     <div class="list-detail">

@@ -45,8 +45,3 @@ require_once 'pdo.php';
         $sql = "UPDATE khach_hang SET mat_khau = ? WHERE ma_kh = ?";
         pdo_execute($sql, $mat_khau_moi, $ma_kh);
     }
-
-    function kh_count() {
-        $sql = "SELECT count(*) FROM khach_hang";
-        return pdo_query_value($sql);
-    }

@@ -25,8 +25,9 @@
         return pdo_query($sql);
     }
 
+
     function hh_selectAll_home() {
-        $sql = "SELECT * FROM hang_hoa ORDER BY ma_hh DESC LIMIT 9";
+        $sql = "SELECT * FROM hang_hoa ORDER BY ngay_nhap DESC LIMIT 8";
         return pdo_query($sql);
     }
 
@@ -85,8 +86,8 @@
         return pdo_query($sql);
     }
 
-    function hh_count() {
-        $sql = "SELECT COUNT(*) FROM hang_hoa";
-        return pdo_query_value($sql);
-    }
+    function hh_select_loai($ma_hh) {
+        $sql = "SELECT ten_loai, ten_hh FROM hang_hoa hh JOIN loai l ON hh.ma_loai = l.ma_loai WHERE ma_hh=?";
+        return pdo_query_one($sql, $ma_hh);
+    } 
 ?>

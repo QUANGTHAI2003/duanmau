@@ -36,8 +36,7 @@ html {
 }
 
 button,
-input,
-select {
+input:not([type="checkbox"]) select {
     -webkit-appearance: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
@@ -99,7 +98,7 @@ p {
 .btn,
 button,
 .actionbg,
-input {
+input:not([type="checkbox"]) {
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -169,7 +168,7 @@ button:hover {
 }
 
 .container {
-    max-width: 890px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -187,14 +186,21 @@ button:hover {
 }
 
 .content-wthree {
-    flex-basis: 60%;
-    -webkit-flex-basis: 60%;
+    flex-basis: 80%;
+    -webkit-flex-basis: 80%;
     box-sizing: border-box;
     padding: 3em 3.5em;
     background: #fff;
     box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.content-wthree form .form-ctn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    grid-gap: 0 30px;
 }
 
 .w3l-workinghny-form .logo {
@@ -250,7 +256,7 @@ button:hover {
     color: #3b3663;
 }
 
-.w3l-mockup-form input {
+.w3l-mockup-form input:not([type="checkbox"]) {
     outline: none;
     margin-bottom: 15px;
     font-size: 16px;
@@ -267,7 +273,7 @@ button:hover {
     transition: 0.3s all ease;
 }
 
-.w3l-mockup-form input:focus {
+.w3l-mockup-form input:not([type="checkbox"]):focus {
     border-color: #00c16e;
 }
 
@@ -508,4 +514,14 @@ p.copy-footer-29 a:hover {
 
 .type-login span {
     margin-left: 4px;
+}
+
+.more-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-type>a {
+    align-self: center;
 }

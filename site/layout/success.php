@@ -18,27 +18,7 @@
         max-width: 450px;
         border-left: 6px solid;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-        transition: all linear 0.3s;
-    }
-
-    .toast .progress {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 3px;
-        width: 100%;
-        border: 0 0 0 6px;
-        background: #47d864;
-    }
-
-    .toast .progress:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        background-color: #47d864;
-        border: 0 0 0 6px;
+        transition: all 1s linear forwards;
     }
 
     @keyframes slideInLeft {
@@ -135,7 +115,7 @@
     function showLoginSuccessToast() {
         toast({
             title: "Đăng nhập thành công!",
-            message: "Chào mừng <?= $_SESSION['username'] ?> với website của chúng tôi",
+            message: "Chào mừng <b><?= $_SESSION['username'] ?></b> với website của chúng tôi",
             type: "success",
             duration: 5000
         });
@@ -144,7 +124,7 @@
     function showLogOutSuccessToast() {
         toast({
             title: "Đăng xuất thành công!",
-            message: "Hẹn gặp lại <?= $_SESSION['username'] ?> lần sau",
+            message: "Hẹn gặp lại <b><?= $_SESSION['username'] ?></b> lần sau",
             type: "info",
             duration: 5000
         });
@@ -194,7 +174,7 @@
             const delay = (duration / 1000).toFixed(2);
 
             toast.classList.add("toast", `toast--${type}`);
-            toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+            toast.style.animation = `slideInLeft ease 0.4s, fadeOut linear 1s ${delay}s forwards`;
 
             toast.innerHTML = `
                     <div class="toast__icon">
@@ -207,7 +187,6 @@
                     <div class="toast__close">
                         <i class="fas fa-times"></i>
                     </div>
-                    <div class="progress"></div>
                 `;
             main.appendChild(toast);
         }
