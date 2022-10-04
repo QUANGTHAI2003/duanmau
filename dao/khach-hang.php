@@ -2,7 +2,7 @@
 require_once 'pdo.php';
     function kh_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro) {
         $sql = "INSERT INTO khach_hang(ma_kh, mat_khau, ho_ten, email, hinh, kich_hoat, vai_tro) VALUES(?, ?, ?, ?, ?, ?, ?)";
-        pdo_execute($sql, $ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat == 1, $vai_tro == 1);
+        pdo_execute($sql, $ma_kh, $mat_khau, $ho_ten, $email, $hinh='user.png', $kich_hoat = 1, $vai_tro = 1);
     }
 
     function kh_update($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro) {

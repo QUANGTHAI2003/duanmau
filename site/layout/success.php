@@ -130,11 +130,11 @@
         });
     }
 
-    function showErrorToast() {
+    function showRegisterSuccessToast() {
         toast({
-            title: "Thất bại!",
-            message: "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
-            type: "info",
+            title: "Đăng ký thành công!",
+            message: "Chúc mừng bạn đã đăng ký thành công",
+            type: "success",
             duration: 5000
         });
     }

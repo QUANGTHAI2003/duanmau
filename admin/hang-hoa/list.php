@@ -59,7 +59,7 @@
             <a href="?btn_list&page_num=0">|&lt;</a>
             <a href="?btn_list&page_num=<?= $_SESSION['page_num'] -1 ?>">&lt;&lt;</a>
             <a href="?btn_list&page_num=<?= $_SESSION['page_num'] +1 ?>">&gt;&gt;</a>
-            <a href="?btn_list&page_num=<?= $_SESSION['page_count'] + 1?>">&gt;|</a>
+            <a href="?btn_list&page_num=<?= $_SESSION['page_count'] - 1?>">&gt;|</a>
         </div>
     </div>
 </div>

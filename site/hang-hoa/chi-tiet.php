@@ -2,6 +2,7 @@
     require_once '../../global.php';
     require '../../dao/hang-hoa.php';
     require '../../dao/binh-luan.php';
+    require '../../dao/loai.php';
     require '../../dao/pdo.php';
 
     extract($_REQUEST);
@@ -15,6 +16,7 @@
 
     // Truy vấn hàng cùng loại
     $hh_cung_loai = hh_select_by_loai($ma_loai);
+    $items_loai = loai_selectAll();
 
     $VIEW_NAME =   "../hang-hoa/chi-tiet-ui.php";
 

@@ -1,15 +1,16 @@
+<?php $ten_loai = "Tất cả sản phẩm" ?>
 <section class="background">
     <div class="content-bg">
-        <h3 class="title-bg">Sản phẩm</h3>
+        <h3 class="title-bg"><?= $ten_loai ?></h3>
         <p>
             <span class="bg-title">Trang chủ</span>
             <i class="fa-solid fa-angle-right"></i>
-            <span class="page">Sản phẩm</span>
+            <span class="page"><?= $ten_loai ?></span>
         </p>
     </div>
 </section>
 <section class="product-list">
-    <h2 class="text-gradient">Tất cả sản phẩm</h2>
+    <h2 class="text-gradient"><?= $ten_loai ?></h2>
     <br>
     <div class="product-list-container">
         <div class="product-inner-container">

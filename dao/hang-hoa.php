@@ -47,7 +47,7 @@
     }
 
     function hh_select_top10() {
-        $sql = "SELECT * FROM hang_hoa WHERE dac_biet = 1";
+        $sql = "SELECT * FROM hang_hoa WHERE dac_biet = 1 ORDER BY ngay_nhap LIMIT 8";
         return pdo_query($sql);
     }
 

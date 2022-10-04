@@ -4,13 +4,15 @@ if (isset($_SESSION['login_success'])) { ?>
     <script>
         showLoginSuccessToast();
     </script>
-<?php unset($_SESSION['login_success']); }  
+<?php unset($_SESSION['login_success']);
+}
 
 if (isset($_SESSION['logout_success'])) { ?>
     <script>
         showLogOutSuccessToast();
     </script>
-<?php unset($_SESSION['logout_success']); }  
+<?php unset($_SESSION['logout_success']);
+}
 
 ?>
 
@@ -105,36 +107,14 @@ if (isset($_SESSION['logout_success'])) { ?>
                                 Tất cả
                             </a>
                         </li>
-                        <li>
-                            <a href="./RauCu.php">
-                                <i class="fa-solid fa-caret-right"></i>
-                                Rau củ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./HoaQua.php">
-                                <i class="fa-solid fa-caret-right"></i>
-                                Hoa quả
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./HaiSan.php">
-                                <i class="fa-solid fa-caret-right"></i>
-                                Hải sản
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./CacLoaiHat.php">
-                                <i class="fa-solid fa-caret-right"></i>
-                                Các lọai hạt
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./ThucPhamTuoiSong.php">
-                                <i class="fa-solid fa-caret-right"></i>
-                                Thực phẩm tươi sống
-                            </a>
-                        </li>
+                        <?php foreach ($items_loai as $loai) { ?>
+                            <li>
+                                <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham&ma_loai=<?= $loai['ma_loai'] ?>">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <?= $loai['ten_loai'] ?>
+                                </a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </section>
             </li>

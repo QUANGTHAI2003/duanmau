@@ -24,9 +24,7 @@
                 </h2>
                 <section class="status">
                     Thương hiệu: <span>Đang cập nhật</span> | Tình trạng:
-                    <span>
-                        10
-                    </span>
+                    <span>Còn hàng</span>
                 </section>
                 <section class="prices">
                     <span class="price-new"><?php echo number_format($don_gia, 0, '.', '.') . "đ" ?>

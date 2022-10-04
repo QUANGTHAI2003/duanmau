@@ -95,7 +95,7 @@ nav ul,
     height: 30px;
     background-color: transparent;
     top: -29px;
-    right: 16px;
+    left: 16px;
 }
 
 .main-subnav:hover .subnav {
@@ -961,6 +961,7 @@ align-items: center; */
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: flex-start;
+    grid-gap: 0 32px
 }
 
 .product-cate .title-cate {

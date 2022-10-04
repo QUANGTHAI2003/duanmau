@@ -1,6 +1,6 @@
 <?php
 require_once '../../global.php';
-require_once '../../dao/pdo.php';
+require '../../dao/pdo.php';
 $msg = '';
 try {
     if (isset($_POST['login'])) {

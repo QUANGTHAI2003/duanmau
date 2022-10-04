@@ -13,6 +13,7 @@ try {
                 if ($_POST['mat_khau'] == $_POST['mat_khau2']) {
                     $hinh = save_file('hinh', "$UPLOAD_URL_USER/");
                     kh_insert($_POST['ma_kh'], $_POST['mat_khau'], $_POST['ho_ten'], $_POST['email'], "$hinh", '0', '0');
+                    $_SESSION['register'] = 1;
                     $msg = "<div class='alert alert-success'>Đăng ký thành công!</div>";
                 } else {
                     $msg = "<div class='alert alert-danger'>Mật khẩu không khớp!</div>";
@@ -25,7 +26,7 @@ try {
 } catch (PDOException $e) {
     $msg = $e->getMessage();
 } finally {
-    header("location: ./register-form.php");
+    header("location: ./login-form.php");
     unset($conn);
 }
 require './register-form.php';
