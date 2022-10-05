@@ -536,12 +536,24 @@ nav.close~.dashboard .top {
     grid-template-columns: 1.6fr 2fr 1fr 1fr 1fr;
 }
 
+.title-user-main,
+.list-user-main {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2.4fr 1.2fr;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .title-user,
 .list-user {
     display: grid;
     grid-template-columns: 1.2fr 1.6fr 3fr 1.6fr 1fr 1.2fr;
     justify-content: left;
     align-items: center;
+}
+
+.list-user {
+    margin: 8px 0;
 }
 
 .title-comment,

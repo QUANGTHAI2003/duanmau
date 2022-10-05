@@ -45,18 +45,20 @@
                 <span class="text">Recent Activity</span>
             </div>
             <div class="activity-user">
-                <div class="title-user">
+                <div class="title-user-main">
                     <div class="title-pro name">Tên người dùng</div>
                     <div class="title-pro email">Email</div>
                     <div class="title-pro date">Đăng nhập lần cuối</div>
                     <div class="title-pro status">Trạng thái</div>
                 </div>
-                <div class="list">
-                    <div class="name">Trần Quang Thái</div>
-                    <div class="email">tranquangthai.10102003@gmail.com</div>
-                    <div class="date">22/09/2022</div>
-                    <div class="status">Offline</div>
-                </div>
+                <?php foreach ($items_kh as $kh) { ?>
+                    <div class="list-user-main">
+                        <div class="name"><?= $kh['ho_ten'] ?></div>
+                        <div class="email"><?= $kh['email'] ?></div>
+                        <div class="date">22/09/2022</div>
+                        <div class="status">Offline</div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <div class="chart-layout">

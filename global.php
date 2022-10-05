@@ -17,7 +17,7 @@
 
     // 2 biến toàn cục cần thiết để chia sẽ giữa controller và view
     $VIEW_NAME = 'index.php';
-    $MESSAGE = "";
+    $msg = "";
 
     /*
         * Kiểm tra sự tồn tại cảu một tham số trong request
@@ -83,15 +83,15 @@
 
     function check_login() {
         global $SITE_URL;
-        if (isset($_SESSION['user'])) {
-            if($_SESSION['user']['vai_tro'] == 1) {
+        if (isset($_SESSION['username'])) {
+            if($_SESSION['username']['vai_tro'] == 1) {
                 return;
             }
-            if(strpos($_SERVER['REQUEST_URL'], '/admin/') == FALSE) {
+            if(strpos($_SERVER['REQUEST_URI'], '/admin/') == FALSE) {
                 return;
             }
         }
-        $_SESSION['request_url'] = $_SERVER['REQUEST_URL'];
+        $_SESSION['request_uri'] = $_SERVER['REQUEST_URI'];
         header("Location: . $SITE_URL/tai-khoan/login-form.php");
     }
 ?>

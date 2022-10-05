@@ -14,9 +14,11 @@ if (exist_param('noi_dung')) {
 $bl_list = bl_select_by_hh($ma_hh); ?>
 
 <h3 class="title">Bình luận</h3>
-<div class="comment-input">
-    <form action="<?= $_SERVER["REQUEST_URI"] ?>" method="POST">
-        <input type="text" name="noi_dung" placeholder="Viết bình luận">
-        <button type="submit" name="comment">Bình luận</button>
-    </form>
-</div>
+<?php if (isset($_SESSION['ma_kh'])) { ?>
+    <div class="comment-input">
+        <form action="<?= $_SERVER["REQUEST_URI"] ?>" method="POST">
+            <input type="text" name="noi_dung" placeholder="Viết bình luận">
+            <button type="submit" name="comment" class="btn-comment">Bình luận</button>
+        </form>
+    </div>
+<?php } ?>

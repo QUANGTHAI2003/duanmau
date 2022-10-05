@@ -16,21 +16,20 @@ if (isset($_SESSION['logout_success'])) { ?>
 
 ?>
 
-
 <header class="header">
     <section class="header-top">
         <section class="bar">
             <i class="fa-solid fa-bars menu"></i>
         </section>
         <section class="logo main">
-            <a href="./index.php">
+            <a href="<?= $SITE_URL ?>/trang-chinh/">
                 <img src="<?= $IMAGES_URL ?>/logo.webp" alt="logo">
             </a>
         </section>
         <section class="overlay"></section>
         <section class="search-box">
-            <form action="#" class="form" role="search">
-                <input type="text" class="form-control search-input" id="input-search" aria-label="Tìm sản phẩm" placeholder="Bạn cần tìm gì?" autocomplete="off" autofocus onblur="this.value = ''">
+            <form action="#" class="form" method="GET">
+                <input type="text" name="keywords" <?= isset($_GET['keywords']) ? $_GET['keywords'] : "" ?> class="form-control search-input" id="input-search" aria-label="Tìm sản phẩm" placeholder="Bạn cần tìm gì?" autocomplete="off" autofocus onblur="this.value = ''">
                 <button type="submit" aria-label="Tìm Kiếm">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -93,13 +92,13 @@ if (isset($_SESSION['logout_success'])) { ?>
     </section>
     <nav class="nav">
         <ul class="ul-main">
-            <li><a class="<?php ?>" href="<?= $SITE_URL ?>/trang-chinh?trang-chu">Trang Chủ</a></li>
-            <li><a class="" href="<?= $SITE_URL ?>/trang-chinh/?gioi-thieu">Giới Thiệu</a>
+            <li><a class="<?php if(exist_param('trang-chu')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh?trang-chu">Trang Chủ</a></li>
+            <li><a class="<?php if(exist_param('gioi-thieu')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?gioi-thieu">Giới Thiệu</a>
             </li>
             <li>
                 <section class="main-subnav">
-                    <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham" class="">Sản phẩm</a>
-                    <i class="fa-solid fa-angle-down down"></i>
+                    <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham" class="<?php if(exist_param('san-pham')) echo  'active' ?>">Sản phẩm</a>
+                    <i class="fa-solid fa-angle-down down <?php if(exist_param('san-pham')) echo  'active' ?>"></i>
                     <ul class="subnav">
                         <li>
                             <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham">
@@ -118,9 +117,9 @@ if (isset($_SESSION['logout_success'])) { ?>
                     </ul>
                 </section>
             </li>
-            <li><a class="" href="<?= $SITE_URL ?>/trang-chinh/?tin-tuc">Tin Tức</a>
+            <li><a class="<?php if(exist_param('tin-tuc')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?tin-tuc">Tin Tức</a>
             </li>
-            <li><a class="" href="<?= $SITE_URL ?>/trang-chinh/?lien-he">Liên hệ</a>
+            <li><a class="<?php if(exist_param('lien-he')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?lien-he">Liên hệ</a>
             </li>
         </ul>
     </nav>
@@ -146,5 +145,15 @@ if (isset($_SESSION['logout_success'])) { ?>
         if (e.keyCode == 191) {
             searchInput.value = null;
         }
+    })
+
+    let items = document.querySelectorAll('.ul-main li');
+    items.forEach(li => {
+        li.addEventListener('click', function() {
+            items.forEach(item_remove_active => {
+                item_remove_active.classList.remove('active');
+            })
+            this.classList.add('.active');
+        })
     })
 </script>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -185,11 +186,11 @@
                 </ul>
                 <section class="product-grids" style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px;">
                     <?php foreach ($items_home as $home) { ?>
-                        <a href="./detail.php" style="text-decoration:none">
+                        <a href="../hang-hoa/chi-tiet.php?ma_hh=<?= $home['ma_hh'] ?>" style="text-decoration:none">
                             <section class="product-grid-inner">
                                 <article class="product-card mix tesla">
                                     <section class="product-thumbnail">
-                                        <img src="<?= $IMAGES_URL ?>/<?= $home['hinh'] ?>" alt="">
+                                        <img src="<?= $IMAGES_URL ?>/<?= $home['hinh'] ?>" alt="<?= $home['ten_hh'] ?>">
                                     </section>
                                     <section class="product-content">
                                         <h3 class="product-name" style="color: black"><?= $home['ten_hh'] ?></h3>
@@ -228,11 +229,11 @@
             <h2 class="text-gradient">SẢN PHẨM ĐẶC BIỆT</h2>
             <section class="product-list-container grids" style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px;">
                 <?php foreach ($items_top as $top) { ?>
-                    <a href="./detail.php" style="text-decoration:none">
+                    <a href="../hang-hoa/chi-tiet.php?ma_hh=<?= $top['ma_hh'] ?>" style="text-decoration:none">
                         <section class="pro duct-grid-inner">
                             <article class="product-card mix tesla">
                                 <section class="product-thumbnail">
-                                    <img src="<?= $IMAGES_URL ?>/<?= $top['hinh'] ?>" alt="">
+                                    <img src="<?= $IMAGES_URL ?>/<?= $top['hinh'] ?>" alt="<?= $top['ten_hh'] ?>">
                                 </section>
                                 <section class="product-content">
                                     <h3 class="product-name" style="color: black"><?= $top['ten_hh'] ?></h3>

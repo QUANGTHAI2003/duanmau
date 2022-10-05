@@ -15,7 +15,7 @@
     hh_tang_so_luot_xem($ma_hh);
 
     // Truy vấn hàng cùng loại
-    $hh_cung_loai = hh_select_by_loai($ma_loai);
+    $hh_cung_loai = hh_select_by_loai($ma_loai, $ma_hh);
     $items_loai = loai_selectAll();
 
     $VIEW_NAME =   "../hang-hoa/chi-tiet-ui.php";

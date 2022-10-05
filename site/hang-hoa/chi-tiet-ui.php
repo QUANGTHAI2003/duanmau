@@ -17,7 +17,7 @@
     <section class="details">
         <article class="article">
             <section class="images-details">
-                <img src="<?= $IMAGES_URL ?>/<?= $hinh ?>" alt="">
+                <img src="<?= $IMAGES_URL ?>/<?= $hinh ?>" alt="<?= $ten_hh ?>">
             </section>
             <section class="content">
                 <h2 class="title"><?= $ten_hh ?>
@@ -27,7 +27,7 @@
                     <span>Còn hàng</span>
                 </section>
                 <section class="prices">
-                    <span class="price-new"><?php echo number_format($don_gia, 0, '.', '.') . "đ" ?>
+                    <span class="price-new"><?= number_format($don_gia, 0, '.', '.') . "đ" ?>
                     </span>
                 </section>
                 <section class="origin">
@@ -84,7 +84,7 @@
             <?php foreach ($bl_list as $bl) { ?>
                 <section class="comment">
                     <div class="comment__avatar">
-                        <img src="<?= $IMAGES_URL_USER ?>/<?= $bl['hinh'] ?>" alt="">
+                        <img src="<?= $IMAGES_URL_USER ?><?= $bl['hinh'] ?>" alt="">
                     </div>
                     <div class="comment__content">
                         <div class="comment__header">
@@ -97,9 +97,25 @@
             <?php } ?>
         </section>
         <div class="same-cate">
-            <a href="">
-                <h3 class="title">Sản phẩm cùng loại</h3>
-            </a>
+            <h3 class="title">Sản phẩm cùng loại</h3>
+            <!-- Product with the same type -->
+            <div class="same-cate-inner">
+                <?php foreach ($hh_cung_loai as $hh_loai) { ?>
+                    <a href="../hang-hoa/chi-tiet.php?ma_hh=<?= $hh_loai['ma_hh'] ?>">
+                        <div class="product-type">
+                            <div class="product-type-image">
+                                <img src="<?= $CONTENT_URL ?>/images/<?= $hh_loai['hinh'] ?>" alt="">
+                            </div>
+                            <div class="product-type-content">
+                                <h4 class="product-type-name"><?= $hh_loai['ten_hh'] ?></h4>
+                                <div class="product__price">
+                                    <span class="product-type-price"><?= number_format($hh_loai['don_gia'], 0, ',', '.') . 'đ' ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </section>

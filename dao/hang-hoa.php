@@ -51,9 +51,9 @@
         return pdo_query($sql);
     }
 
-    function hh_select_by_loai($ma_loai) {
-        $sql = "SELECT * FROM hang_hoa WHERE ma_loai=?";
-        return pdo_query($sql, $ma_loai);
+    function hh_select_by_loai($ma_loai, $ma_hh) {
+        $sql = "SELECT * FROM hang_hoa WHERE ma_loai=? AND NOT ma_hh = ?";
+        return pdo_query($sql, $ma_loai, $ma_hh);
     }
 
     function hh_select_by_keyword($keyword) {

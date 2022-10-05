@@ -27,8 +27,7 @@
                         <h2>Login Now</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php require_once '../../global.php' ?>
-                        <?= $msg = '';
-                        $msg ?>
+                        <?= $msg ?>
                         <form action="./login.php" method="POST">
                             <input type="text" class="email" name="ma_kh" placeholder="Enter Your Email" value="<?= get_cookie('ma_kh') ?>" required>
                             <div class="field">

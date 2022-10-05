@@ -1,39 +1,31 @@
 <?php
 require_once '../../global.php';
 require '../../dao/pdo.php';
-$msg = '';
+require '../../dao/khach-hang.php';
 try {
     if (isset($_POST['login'])) {
         if (empty($_POST['ma_kh']) || empty($_POST['mat_khau'])) {
             $msg = "Email or Password is empty";
         } else {
-            $query = "SELECT * FROM khach_hang WHERE ma_kh = :ma_kh AND mat_khau = :mat_khau";
-            $conn = pdo_get_connection();
-            $stmt = $conn->prepare($query);
-            $stmt->execute(
-                array(
-                    'ma_kh' => $_POST['ma_kh'],
-                    'mat_khau' => $_POST['mat_khau']
-                )
-            );
-
-            if(exist_param('ghi_nho')) {
-                add_cookie('ma_kh', $_POST['ma_kh'], 30);
-                add_cookie('mat_khau', $_POST['mat_khau'], 30);
+            $ma_kh = $_POST['ma_kh'];
+            $mat_khau = $_POST['mat_khau'];
+            $user = kh_select_by_id($ma_kh);
+            if ($user) {
+                if (password_verify($mat_khau, $user['mat_khau'])) {
+                    $_SESSION['ma_kh'] = $user['ma_kh'];
+                    $_SESSION['username'] = $user['ho_ten'];
+                    $_SESSION['vai_tro'] = $user['vai_tro'];
+                    $_SESSION['login_success'] = 1;
+                    if ($user['vai_tro'] == 1) {
+                        header("location: ../trang-chinh/index.php");
+                    } else {
+                        header("location: ../../admin/trang-chinh/index.php");
+                    }
+                } else {
+                    $msg = "Mật khẩu không đúng";
+                }
             } else {
-                delete_cookie('ma_kh');
-                delete_cookie('mat_khau');
-            }
-
-            $count = $stmt->rowCount();
-            if ($count > 0) {
-                $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                $_SESSION['ma_kh'] = $_POST['ma_kh'];
-                $_SESSION['username'] = $row['ho_ten'];
-                $_SESSION['login_success'] = 1;
-                header("location: ../trang-chinh/index.php");
-            } else {
-                $msg = "<div class='alert alert-danger'>Email hoặc password sai! Vui lòng thử lại</div>";
+                $msg = "Mã khách hàng không tồn tại";
             }
         }
     } else {

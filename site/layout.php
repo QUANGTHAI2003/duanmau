@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
     <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/reset.css">
-    <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/style.css">
+    <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/style.css?v=1">
     <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/responsive.css">
     <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/loading.css">
     <link rel="icon" href="<?= $IMAGES_URL ?>/favicon.ico" type="image/x-icon" />

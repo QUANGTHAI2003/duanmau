@@ -45,7 +45,7 @@
     </ul>
     <ul class="logout-mode">
         <li>
-            <a href="../logout.php">
+            <a href="#">
                 <i class="uil uil-signout"></i>
                 <span class="link-name">Logout</span>
             </a>

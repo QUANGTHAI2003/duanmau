@@ -43,7 +43,7 @@
                             <div class="name"><?= $ho_ten ?></div>
                             <div class="email"><?= $email ?></div>
                             <div class="image"><?= $hinh ?></div>
-                            <div class="role"><?= ($vai_tro == 1) ? "Nhân viên" : "Khách hàng"; ?></div>
+                            <div class="role"><?= ($vai_tro == 0) ? "Nhân viên" : "Khách hàng"; ?></div>
                             <div class="func">
                                 <a href="./index.php?btn_edit&ma_kh=<?= $ma_kh ?>">
                                     <button class="btn btn-update updateBtn">Sửa</button>

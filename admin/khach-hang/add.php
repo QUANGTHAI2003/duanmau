@@ -66,8 +66,8 @@
                                     <div class="form-group role">
                                         <label for="ten">Vai trò</label>
                                         <div class="form-control-role">
-                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="0" placeholder="Nhập vào địa chỉ">Khách hànghàng</label>
-                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="1" placeholder="Nhập vào địa chỉ" checked>Nhân viên</label>
+                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="1" placeholder="Nhập vào địa chỉ">Khách hànghàng</label>
+                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="0" placeholder="Nhập vào địa chỉ" checked>Nhân viên</label>
                                         </div>
                                     </div>
                                 </div>
