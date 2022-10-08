@@ -27,7 +27,7 @@
             <div class="add-product">
                 <div class="add-product-inner">
                     <div class="add-product-body">
-                        <form action="./index.php?btn_insert" method="POST" enctype="multipart/form-data">
+                        <form action="./index.php?btn_update" method="POST" enctype="multipart/form-data">
                             <div class="form" style="display: grid; grid-template-columns: 1fr 1fr">
                                 <div class="form-left">
                                     <div class="form-group">
@@ -44,8 +44,11 @@
                                             <option value="">Tên danh mục</option>
                                             <?php
                                             foreach ($items_loai as $loai) {
-                                                extract($loai);
-                                                echo '<option value="' . $ma_loai . '">' . $ten_loai . '</option>';
+                                                if ($loai['ma_loai'] == $ma_loai) {
+                                                    echo "<option value='{$loai['ma_loai']}' selected>{$loai['ten_loai']}</option>";
+                                                } else {
+                                                    echo "<option value='{$loai['ma_loai']}'>{$loai['ten_loai']}</option>";
+                                                }
                                             }
                                             ?>
                                         </select>
@@ -65,21 +68,22 @@
                                         <input type="text" name="giam_gia" id="qty" value="<?= $giam_gia ?>" class="form-control" placeholder="Nhập số lượng sản phẩm">
                                     </div>
                                     <div class="form-group"></div>
-                                        <!-- <label for="qty">Hàng đặc biệt</label> -->
-                                        <label class="radio-inline"><input type="radio" name="dac_biet" value="0" placeholder="Nhập vào địa chỉ" <?= !$dac_biet ? 'checked' : '' ?> >Bình thường</label>
-                                        <label class="radio-inline"><input type="radio" name="dac_biet" value="1" placeholder="Nhập vào địa chỉ" <?= $dac_biet ? 'checked' : '' ?> >Đặc biệt</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="desc">Mô tả</label>
-                                        <textarea type="text" name="mo_ta" value="<?= $mo_ta ?>" rows="3" class="form-control" placeholder="Nhập tên sản phẩm"></textarea>
-                                    </div>
+                                    <!-- <label for="qty">Hàng đặc biệt</label> -->
+                                    <label class="radio-inline"><input type="radio" name="dac_biet" value="0" placeholder="Nhập vào địa chỉ" <?= !$dac_biet ? 'checked' : '' ?>>Bình thường</label>
+                                    <label class="radio-inline"><input type="radio" name="dac_biet" value="1" placeholder="Nhập vào địa chỉ" <?= $dac_biet ? 'checked' : '' ?>>Đặc biệt</label>
                                 </div>
+                                <div class="form-group">
+                                    <label for="desc">Mô tả</label>
+                                    <textarea type="text" name="mo_ta" value="<?= $mo_ta ?>" rows="3" class="form-control" placeholder="Nhập tên sản phẩm"></textarea>
+                                </div>
+                                <input type="hidden" name="so_luot_xem" value="<?= $so_luot_xem ?> ">
                             </div>
-                            <button type="submit" name="addProduct" class="btn-add">Sửa</button>
-                        </form>
                     </div>
+                    <button type="submit" name="addProduct" class="btn-add">Sửa</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>

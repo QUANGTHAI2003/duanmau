@@ -20,7 +20,9 @@
 
         <div class="activity-detail">
             <div class="title-detail">
-                <div class="title-pro name"><input type="checkbox" onclick="toogleCheckBox(this)" id=""></div>
+                <div class="title-pro name">
+                    <input type="checkbox" onclick="toogleCheckBox(this)" id="">
+                </div>
                 <div class="title-pro name">Nội dung</div>
                 <div class="title-pro image">Ngày bình luận</div>
                 <div class="title-pro price">Người bình luận</div>
@@ -32,7 +34,9 @@
                     extract($bl);
             ?>
                     <div class="list-detail">
-                        <div class="name"><input type="checkbox" name="checkBox" value="checkbox<?= $ma_hh ?>" id=""></div>
+                        <div class="name">
+                            <input type="checkbox" name="checkBox" value="checkbox<?= $ma_hh ?>" id="">
+                        </div>
                         <div class="name text">
                             <?= $noi_dung ?>
                         </div>
@@ -40,7 +44,9 @@
                         <div class="qty"><?= $ma_kh ?></div>
                         <div class="func">
                             <a href="./index.php?btn_delete&ma_bl=<?= $ma_bl ?>">
-                                <button>Xóa</button>
+                                <button>
+                                    <span>Delete</span>
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -54,7 +60,7 @@
     function toogleCheckBox(source) {
         var checkboxes = document.getElementsByName('checkBox');
         lengthCheckBox = checkboxes.length;
-        for (var i = 0; i < lengthCheckBox; i++) {
+        for (let i = 0; i < lengthCheckBox; i++) {
             checkboxes[i].checked = source.checked;
         }
     }

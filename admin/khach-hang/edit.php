@@ -40,11 +40,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="ten">Mật khẩu</label>
-                                        <input type="text" name="mat_khau" value="<?= $mat_khau ?>" class="form-control" placeholder="Nhập tên mật khẩukhẩu">
+                                        <input type="text" name="mat_khau" value="<?= password_verify($mat_khau, PASSWORD_DEFAULT) ?>" class="form-control" placeholder="Nhập tên mật khẩu">
                                     </div>
                                     <div class="form-group">
                                         <label for="ten">Xác nhận mmật khẩu</label>
-                                        <input type="text" name="mat_khau2" value="<?= $mat_khau ?>" class="form-control" placeholder="Xác nhận mật khẩukhẩu">
+                                        <input type="text" name="mat_khau2" value="<?= password_verify($mat_khau, PASSWORD_DEFAULT) ?>" class="form-control" placeholder="Xác nhận mật khẩu">
                                     </div>
                                 </div>
                                 <div class="form-right">
@@ -67,8 +67,8 @@
                                     <div class="form-group role">
                                         <label for="ten">Vai trò</label>
                                         <div class="form-control-role">
-                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="0" placeholder="Nhập vào địa chỉ" <?= !$vai_tro ? 'checked' : '' ?> >Khách hànghàng</label>
-                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="1" placeholder="Nhập vào địa chỉ" <?= $vai_tro ? 'checked' : '' ?> >Nhân viên</label>
+                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="0" placeholder="Nhập vào địa chỉ" <?= $vai_tro ? 'checked' : '' ?> >Khách hànghàng</label>
+                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="1" placeholder="Nhập vào địa chỉ" <?= !$vai_tro ? 'checked' : '' ?> >Nhân viên</label>
                                         </div>
                                     </div>
                                 </div>

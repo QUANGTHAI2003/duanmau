@@ -28,7 +28,7 @@ if (isset($_SESSION['logout_success'])) { ?>
         </section>
         <section class="overlay"></section>
         <section class="search-box">
-            <form action="#" class="form" method="GET">
+            <form action="<?= $SITE_URL ?>/hang-hoa/liet-ke-ui.php" class="form" method="GET">
                 <input type="text" name="keywords" <?= isset($_GET['keywords']) ? $_GET['keywords'] : "" ?> class="form-control search-input" id="input-search" aria-label="Tìm sản phẩm" placeholder="Bạn cần tìm gì?" autocomplete="off" autofocus onblur="this.value = ''">
                 <button type="submit" aria-label="Tìm Kiếm">
                     <i class="fa-solid fa-magnifying-glass"></i>

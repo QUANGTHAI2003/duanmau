@@ -23,7 +23,5 @@ function thong_ke_binh_luan()
             JOIN hang_hoa hh ON hh.ma_hh = bl.ma_hh 
             GROUP BY hh.ma_hh, hh.ten_hh 
             HAVING so_luong > 0";
-
-            
     return pdo_query($sql);
 }

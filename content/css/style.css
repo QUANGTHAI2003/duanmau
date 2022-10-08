@@ -1800,6 +1800,10 @@ align-items: center; */
     border: 1px solid #ebebeb;
     font-size: 16px;
     margin-left: 12px;
+    -webkit-border-radius: 100rem;
+    -moz-border-radius: 100rem;
+    -ms-border-radius: 100rem;
+    -o-border-radius: 100rem;
 }
 
 .qty-button button i {
@@ -1872,7 +1876,7 @@ align-items: center; */
 
 .comment-input form button {
     width: 100px;
-outline: none;
+    outline: none;
 }
 
 .comment-input form input {
@@ -2294,4 +2298,49 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
     justify-content: center;
     align-items: left;
+}
+
+.list-detail .func .btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 1px solid #bdbdbd;
+    height: 48px;
+    padding: 0 24px 0 16px;
+    letter-spacing: 0.25px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.list-detail .func .btn:focus {
+    outline: none;
+}
+
+.list-detail .func .btn .mdi {
+    margin-right: 8px;
+}
+
+.list-detail .func .btn-delete {
+    font-size: 16px;
+    color: red;
+}
+
+.list-detail .btn-delete .mdi-delete-empty {
+    display: none;
+}
+
+.list-detail .btn-delete:hover {
+    background-color: #fff5f5;
+}
+
+.list-detail .btn-delete:hover .mdi-delete-empty {
+    display: block;
+}
+
+.list-detail .btn-delete:hover .mdi-delete {
+    display: none;
+}
+
+.list-detail .btn-delete:focus {
+    box-shadow: 0 0 0 4px #fcc;
 }

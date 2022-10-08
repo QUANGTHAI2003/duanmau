@@ -6,5 +6,4 @@
     $items_kh = kh_selectAll();
     $VIEW_NAME = "trang-chinh/home.php";
     require "../layout.php";
-    
 ?>

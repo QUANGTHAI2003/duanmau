@@ -40,7 +40,7 @@
             ?>
                     <div class="list-product" style="align-items: center;">
                         <div class="name"><?= $ten_hh ?></div>
-                        <div class="image"><img src="../../upload/<?= $hinh ?>" alt=""></div>
+                        <div class="image"><img src="<?= $UPLOAD_URL_PRO ?><?= $hinh ?>" alt=""></div>
                         <div class="qty"><?= number_format($don_gia, 0, ',', '.') . 'đ' ?></div>
                         <div class="price"><?= $ngay_nhap ?></div>
                         <div class="func">

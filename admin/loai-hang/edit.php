@@ -27,7 +27,7 @@
             <div class="add-cate">
                 <div class="add-cate-inner" style="width: 500px;">
                     <div class="add-cate-body">
-                        <form action="./index.php?btn_update" method="POST">
+                        <form action="./index.php?btn_update&ma_loai=<?= $ma_loai ?>" method="POST">
                             <div class="form_cate" style="display: grid; grid-template-rows: 1fr 1fr">
                                 <div class="form-group">
                                     <label for="ten">Tên danh mục</label>

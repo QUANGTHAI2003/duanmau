@@ -23,7 +23,7 @@
         $items_loai = loai_selectAll();
         $VIEW_NAME = "list.php";
     } elseif(exist_param("btn_update")) {
-        $ma_loai = $_GET['ma_loai'];
+        $ma_loai = $_REQUEST['ma_loai'];
         $ten_loai = $_POST['ten_loai'];
         loai_update($ma_loai, $ten_loai);
         $items_loai = loai_selectAll();

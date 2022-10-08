@@ -20,7 +20,7 @@
         $VIEW_NAME = "list.php";
     } elseif(exist_param("btn_edit")) {
         $ma_kh = $_REQUEST['ma_kh'];
-    $kh_info = kh_select_by_id($ma_kh);
+        $kh_info = kh_select_by_id($ma_kh);
         extract($kh_info);
         $items_kh = kh_selectAll();
         $VIEW_NAME = "edit.php";

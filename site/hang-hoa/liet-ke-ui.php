@@ -13,17 +13,26 @@
     <br>
     <div class="product-list-container">
         <div class="product-inner-container">
-            <?php include '../hang-hoa/danh-muc.php' ?>
+            <section class="categories-product">
+                <div class="product-cate">
+                    <div class="title-cate">Danh mục sản phẩm</div>
+                    <ul class="content-cate">
+                        <?php foreach ($items_loai as $loai) { ?>
+                            <li><a href="<?= $SITE_URL ?>/trang-chinh/?san-pham&ma_loai=<?= $loai['ma_loai'] ?>"><?= $loai['ten_loai'] ?></a></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </section>
             <section class="product-grid">
                 <?php foreach ($items as $pro) { ?>
                     <a href="../hang-hoa/chi-tiet.php?ma_hh=<?= $pro['ma_hh'] ?>" style="text-decoration:none">
                         <section class="product-grid-inner">
                             <article class="product-card mix tesla">
                                 <section class="product-thumbnail">
-                                    <img src="<?= $IMAGES_URL ?>/<?= $pro['hinh'] ?>" alt="">
+                                    <img src="<?= $IMAGES_URL ?>/<?= $pro['hinh'] ?>" alt="<?= $pro['ten_hh'] ?>">
                                 </section>
                                 <section class="product-content">
-                                    <h3 class="product-name" style="color: black"><?php echo $pro['ten_hh'] ?></h3>
+                                    <h3 class="product-name" style="color: black"><?= $pro['ten_hh'] ?></h3>
                                     </h3>
                                     <section class="product-price">
                                         <section class="product-new-price price">
