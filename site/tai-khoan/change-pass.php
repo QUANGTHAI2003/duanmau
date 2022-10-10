@@ -19,17 +19,12 @@
             <!-- /form -->
             <div class="workinghny-form-grid">
                 <div class="main-mockup">
-                    <div class="w3l_form align-self">
-                        <div class="left_grid_info">
-                            <img src="images/image3.svg" alt="">
-                        </div>
-                    </div>
                     <div class="content-wthree">
                         <h2>Change Password</h2>
-                        <form action="./change-pass-query.php?ma_kh=<?= $ma_kh ?>" method="post">
+                        <form action="./change-pass-query.php?ma_kh=<?= $ma_kh ?>" method="post" style="max-width: 300px; display: flex; flex-direction: column; gap: 8px 0;">
                             <input type="text" class="password" name="mat_khau" value="<?= $mat_khau ?>" placeholder="Enter Your Password" required>
                             <input type="text" class="confirm-password" name="mat_khau2" placeholder="Enter Your Confirm Password" required>
-                            <button name="update-pass" class="btn" type="submit">Change Password</button>
+                            <button name="update-pass" class="btn-change" type="submit">Change Password</button>
                         </form>
                     </div>
                 </div>

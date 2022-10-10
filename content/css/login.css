@@ -196,13 +196,6 @@ button:hover {
     border-bottom-right-radius: 8px;
 }
 
-.content-wthree form .form-ctn {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: flex-start;
-    grid-gap: 0 30px;
-}
-
 .w3l-workinghny-form .logo {
     text-align: center;
 }

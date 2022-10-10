@@ -7,3 +7,4 @@
     $VIEW_NAME = "trang-chinh/home.php";
     require "../layout.php";
 ?>
+<script src="../content/app.js"></script>

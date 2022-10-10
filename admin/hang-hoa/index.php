@@ -33,6 +33,7 @@
         $items_hh = hh_select_page();
         $VIEW_NAME = "list.php";
     } elseif(exist_param("btn_update")) {
+        $ma_hh = $_REQUEST['ma_hh'];
         $ten_hh = isset($_POST['ten_hh']) ? $_POST['ten_hh'] : '';
         $don_gia = isset($_POST['don_gia']) ? $_POST['don_gia'] : '';
         $giam_gia = isset($_POST['giam_gia']) ? $_POST['giam_gia'] : ''; 

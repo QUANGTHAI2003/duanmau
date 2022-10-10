@@ -36,7 +36,7 @@
         return pdo_query_one($sql, $ma_hh);
     }
 
-    function hh_exist($ma_hh) {
+function hh_exist($ma_hh) {
         $sql = "SELECT count(*) FROM hang_hoa WHERE ma_hh=?";
         return pdo_query_value($sql, $ma_hh) > 0;
     }
@@ -46,8 +46,8 @@
         pdo_execute($sql, $ma_hh);
     }
 
-    function hh_select_top10() {
-        $sql = "SELECT * FROM hang_hoa WHERE dac_biet = 1 ORDER BY ngay_nhap LIMIT 8";
+    function hh_select_top8() {
+        $sql = "SELECT * FROM hang_hoa WHERE so_luot_xem > 1 ORDER BY so_luot_xem DESC LIMIT 8";
         return pdo_query($sql);
     }
 

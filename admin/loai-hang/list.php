@@ -29,7 +29,6 @@
                 <div class="title-categories">
                     <div class="title-pro stt">STT</div>
                     <div class="title-pro categories">Tên danh mục</div>
-                    <div class="title-pro status_cate">Trạng thái</div>
                     <div class="title-pro func">Chức năng</div>
                 </div>
                 <?php
@@ -40,9 +39,6 @@
                         <div class="list-categories">
                             <div class="name"><?= $ma_loai ?></div>
                             <div class="qty"><?= $ten_loai ?></div>
-                            <div class="price">
-                                Active
-                            </div>
                             <div class="func">
                                 <a href="./index.php?btn_edit&ma_loai=<?= $ma_loai ?>">
                                     <button class="btn btn-update updateBtn">Sửa</button>

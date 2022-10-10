@@ -19,7 +19,7 @@
     } else {
         require_once '../../dao/hang-hoa.php';
         $items_home = hh_selectAll_home();
-        $items_top = hh_select_top10();
+        $items_top = hh_select_top8();
         $items_loai = loai_selectAll();
         $VIEW_NAME = "trang-chinh/trang-chu.php";
     }

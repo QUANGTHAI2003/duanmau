@@ -16,13 +16,6 @@
                 <i class="uil uil-clock-three"></i>
                 <span class="text">Analytics Management</span>
             </div>
-            <div class="add title">
-                <button class="text openbox">
-                    <a href="./index.php?btn_add">
-                        <i class="uil uil-plus"></i>
-                    </a>
-                </button>
-            </div>
         </div>
 
         <div class="activity-analytics">
@@ -51,7 +44,7 @@
         <?php }
         } ?>
         <a href="./index.php?chart">
-            <button>Xem biểu đồ</button>
+            <button class="btn btn-info view">Xem biểu đồ</button>
         </a>
     </div>
 </div>

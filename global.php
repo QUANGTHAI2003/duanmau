@@ -52,7 +52,7 @@
         * @param int $day số ngày cookie tồn tại
     */
 
-    function add_cookie($name, $value, $day) {
+    function add_cookie($name = null, $value, $day) {
         setcookie($name, $value, time() + (86400 * $day), "/");
     }
 

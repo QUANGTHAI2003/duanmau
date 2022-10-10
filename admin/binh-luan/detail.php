@@ -44,8 +44,8 @@
                         <div class="qty"><?= $ma_kh ?></div>
                         <div class="func">
                             <a href="./index.php?btn_delete&ma_bl=<?= $ma_bl ?>">
-                                <button>
-                                    <span>Delete</span>
+                                <button class="btn btn-delete">
+                                    Xóa
                                 </button>
                             </a>
                         </div>

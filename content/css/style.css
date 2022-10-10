@@ -2236,6 +2236,10 @@ input[type=number]::-webkit-outer-spin-button {
     height: 160px;
     object-fit: cover;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .account-content-info .account-info {
@@ -2252,11 +2256,67 @@ input[type=number]::-webkit-outer-spin-button {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.account-update form button {
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding-left: 8px;
+    border: none;
+    outline: none;
+    border: 1.4px solid #ccc;
+    font-weight: bold;
+}
+
+.account-update form .account-update-item {
+    margin: 0 8px;
+}
+
+.account-update form .account-update-item input {
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding-left: 8px;
+    border: none;
+    outline: none;
+    border: 1.4px solid #ccc;
+}
+
 .account-update form .account-update-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.content-wthree form {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px 0;
+}
+
+.content-wthree form input,
+.content-wthree form button {
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding-left: 8px;
+    border: none;
+    outline: none;
+    border: 1.4px solid #ccc;
 }
 
 .same-cate {

@@ -19,8 +19,8 @@
                 </div>
                 <div class="list">
                     <a href="./index.php?btn_list">
-                        <i class="uil uil-clock-three"></i>
-                        <span class="text">List</span>
+                        <i class="uil uil-clock-three" style="color: white;"></i>
+                        <span class="text">Danh sách</span>
                     </a>
                 </div>
             </div>
@@ -55,7 +55,6 @@
                                     <div class="form-group">
                                         <label for="ten">Hình</label>
                                         <input type="file" name="hinh" class="form-control" value="<?= $hinh ?>">
-                                        (<?= $hinh ?>)
                                     </div>
                                     <div class="form-group">
                                         <label for="ten">Kích hoạt</label>
@@ -67,7 +66,7 @@
                                     <div class="form-group role">
                                         <label for="ten">Vai trò</label>
                                         <div class="form-control-role">
-                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="0" placeholder="Nhập vào địa chỉ" <?= $vai_tro ? 'checked' : '' ?> >Khách hànghàng</label>
+                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="0" placeholder="Nhập vào địa chỉ" <?= $vai_tro ? 'checked' : '' ?> >Khách hàng</label>
                                             <label class="radio-inline"><input type="radio" name="vai_tro" value="1" placeholder="Nhập vào địa chỉ" <?= !$vai_tro ? 'checked' : '' ?> >Nhân viên</label>
                                         </div>
                                     </div>

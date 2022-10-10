@@ -19,8 +19,8 @@
                 </div>
                 <div class="list">
                     <a href="./index.php?btn_list">
-                        <i class="uil uil-clock-three"></i>
-                        <span class="text">List</span>
+                        <i class="uil uil-clock-three" style="color: white;"></i>
+                        <span class="text">Danh sách</span>
                     </a>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                                         <input type="password" name="mat_khau" class="form-control" placeholder="Nhập tên mật khẩukhẩu">
                                     </div>
                                     <div class="form-group">
-                                        <label for="ten">Xác nhận mmật khẩu</label>
+                                        <label for="ten">Xác nhận mật khẩu</label>
                                         <input type="password" name="mat_khau2" class="form-control" placeholder="Xác nhận mật khẩukhẩu">
                                     </div>
                                 </div>
@@ -58,15 +58,15 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="ten">Kích hoạt</label>
-                                        <div class="form-control-status">
+                                        <div class="form-check">
                                             <label class="radio-inline"><input type="radio" name="kich_hoat" value="0" placeholder="Nhập vào địa chỉ">Chưa kích hoạt</label>
                                             <label class="radio-inline"><input type="radio" name="kich_hoat" value="1" placeholder="Nhập vào địa chỉ" checked>Đã kích hoạt</label>
                                         </div>
                                     </div>
-                                    <div class="form-group role">
+                                    <div class="form-group">
                                         <label for="ten">Vai trò</label>
-                                        <div class="form-control-role">
-                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="1" placeholder="Nhập vào địa chỉ">Khách hànghàng</label>
+                                        <div class="form-check">
+                                            <label class="radio-inline"><input type="radio" name="vai_tro" value="1" placeholder="Nhập vào địa chỉ">Khách hàng</label>
                                             <label class="radio-inline"><input type="radio" name="vai_tro" value="0" placeholder="Nhập vào địa chỉ" checked>Nhân viên</label>
                                         </div>
                                     </div>

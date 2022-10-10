@@ -1,11 +1,13 @@
-const sidebar = document.querySelector("nav");
-const sidebarToggle = document.querySelector(".sidebar-toggle");
+const body = document.querySelector("body"),
+    modeToggle = body.querySelector(".mode-toggle");
+sidebar = body.querySelector("nav");
+sidebarToggle = body.querySelector(".sidebar-toggle");
 
 sidebarToggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
-    if(sidebar.classList.contains("close")){
+    if (sidebar.classList.contains("close")) {
         localStorage.setItem("status", "close");
-    }else{
+    } else {
         localStorage.setItem("status", "open");
     }
 })

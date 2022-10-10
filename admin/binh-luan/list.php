@@ -38,7 +38,7 @@
                         <div class="price"><?= $cu_nhat ?></div>
                         <div class="func">
                             <a href="./index.php?ma_hh=<?= $ma_hh ?>">
-                                <button>Chi tiêt</button>
+                                <button class="btn btn-info">Chi tiết</button>
                             </a>
                         </div>
                     </div>

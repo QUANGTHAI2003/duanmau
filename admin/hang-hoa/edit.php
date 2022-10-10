@@ -19,21 +19,17 @@
                 </div>
                 <div class="list">
                     <a href="./index.php?btn_list">
-                        <i class="uil uil-clock-three"></i>
-                        <span class="text">List</span>
+                        <i class="uil uil-clock-three" style="color: white;"></i>
+                        <span class="text">Danh sách</span>
                     </a>
                 </div>
             </div>
             <div class="add-product">
                 <div class="add-product-inner">
                     <div class="add-product-body">
-                        <form action="./index.php?btn_update" method="POST" enctype="multipart/form-data">
+                        <form action="./index.php?btn_update&ma_hh=<?= $ma_hh ?>" method="POST" enctype="multipart/form-data">
                             <div class="form" style="display: grid; grid-template-columns: 1fr 1fr">
                                 <div class="form-left">
-                                    <div class="form-group">
-                                        <label for="ten">Mã hàng hóa</label>
-                                        <input type="text" name="ma_hh" value="<?= $ma_hh ?>" class="form-control" placeholder="Nhập tên sản phẩm">
-                                    </div>
                                     <div class="form-group">
                                         <label for="ten">Tên hàng hóa</label>
                                         <input type="text" name="ten_hh" value="<?= $ten_hh ?>" class="form-control" placeholder="Nhập tên sản phẩm">
@@ -56,6 +52,7 @@
                                     <div class="form-group">
                                         <label for="img">Ảnh sản phẩm</label>
                                         <input type="file" name="hinh" id="img" value="<?= $hinh ?>" />
+                                        (<?= $hinh ?>)
                                     </div>
                                 </div>
                                 <div class="form-right">
@@ -72,15 +69,15 @@
                                     <label class="radio-inline"><input type="radio" name="dac_biet" value="0" placeholder="Nhập vào địa chỉ" <?= !$dac_biet ? 'checked' : '' ?>>Bình thường</label>
                                     <label class="radio-inline"><input type="radio" name="dac_biet" value="1" placeholder="Nhập vào địa chỉ" <?= $dac_biet ? 'checked' : '' ?>>Đặc biệt</label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="desc">Mô tả</label>
-                                    <textarea type="text" name="mo_ta" value="<?= $mo_ta ?>" rows="3" class="form-control" placeholder="Nhập tên sản phẩm"></textarea>
-                                </div>
                                 <input type="hidden" name="so_luot_xem" value="<?= $so_luot_xem ?> ">
                             </div>
+                            <div class="form-group">
+                                <label for="desc">Mô tả</label>
+                                <textarea type="text" name="mo_ta" value="<?= $mo_ta ?>" rows="3" class="form-control" placeholder="Nhập tên sản phẩm"></textarea>
+                            </div>
+                            <button type="submit" name="addProduct" class="btn-add">Sửa</button>
+                        </form>
                     </div>
-                    <button type="submit" name="addProduct" class="btn-add">Sửa</button>
-                    </form>
                 </div>
             </div>
         </div>
