@@ -12,10 +12,6 @@
     } elseif(exist_param("tin-tuc")) {
         $items_loai = loai_selectAll();
         $VIEW_NAME = "trang-chinh/tin-tuc.php";
-    } elseif(exist_param("san-pham")) {
-        $items_loai = loai_selectAll();
-        $VIEW_NAME = "hang-hoa/liet-ke-ui.php";
-        require_once '../hang-hoa/liet-ke.php';
     } else {
         require_once '../../dao/hang-hoa.php';
         $items_home = hh_selectAll_home();

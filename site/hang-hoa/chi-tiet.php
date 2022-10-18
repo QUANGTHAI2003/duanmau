@@ -19,6 +19,4 @@
     $items_loai = loai_selectAll();
 
     $VIEW_NAME =   "../hang-hoa/chi-tiet-ui.php";
-
-
     require '../layout.php';

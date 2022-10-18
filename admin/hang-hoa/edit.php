@@ -51,7 +51,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="img">Ảnh sản phẩm</label>
-                                        <input type="file" name="hinh" id="img" value="<?= $hinh ?>" />
+                                        <input type="hidden" name="hinh" id="img" value="<?= $hinh ?>" />
+                                        <input type="file" name="up_hinh" id="img"/>
                                         (<?= $hinh ?>)
                                     </div>
                                 </div>

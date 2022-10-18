@@ -266,9 +266,9 @@ button:hover {
     transition: 0.3s all ease;
 }
 
-.w3l-mockup-form input:not([type="checkbox"]):focus {
+/* .w3l-mockup-form input:not([type="checkbox"]):focus {
     border-color: #00c16e;
-}
+} */
 
 .w3l-mockup-form button {
     font-size: 18px;
@@ -517,4 +517,29 @@ p.copy-footer-29 a:hover {
 
 .more-type>a {
     align-self: center;
+}
+
+
+.form-control.error small {
+    color: #e74c3c;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.form-control.error input {
+    border-bottom: 2px solid #e74c3c;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control.success input {
+    border-bottom: 2px solid #00c16e;
+    transition: all 0.2s ease-in-out;
+}
+
+.btnSubmit {
+    background-color: #ccc;
+    cursor: not-allowed;
 }

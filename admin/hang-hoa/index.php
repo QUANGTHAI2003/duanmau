@@ -16,7 +16,8 @@
         $mo_ta = isset($_POST['mo_ta']) ? $_POST['mo_ta'] : 'Thông tin sản phẩm đang được cập nhật';
         $ngay_nhap = date('d-m-Y');
         $so_luot_xem = 0;
-        $hinh = save_file('hinh', $UPLOAD_URL_PRO);
+        $up_hinh = save_file('hinh', $UPLOAD_URL_PRO);
+        $hinh = strlen($up_hinh) > 0 ? $up_hinh : 'no-image.png';
         hh_insert($ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
         $items_hh = hh_select_page();
         $VIEW_NAME = "list.php";
@@ -37,11 +38,14 @@
         $ten_hh = isset($_POST['ten_hh']) ? $_POST['ten_hh'] : '';
         $don_gia = isset($_POST['don_gia']) ? $_POST['don_gia'] : '';
         $giam_gia = isset($_POST['giam_gia']) ? $_POST['giam_gia'] : ''; 
-        $hinh = save_file('hinh', $UPLOAD_URL_PRO);
         $ma_loai = isset($_POST['ma_loai']) ? $_POST['ma_loai'] : '';
         $dac_biet = isset($_POST['dac_biet']) ? $_POST['dac_biet'] : '';
         $ngay_nhap = date('d-m-Y');
         $mo_ta = isset($_POST['mo_ta']) ? $_POST['mo_ta'] : 'Thông tin sản phẩm đang được cập nhật';
+
+        $up_hinh = save_file('up_hinh', $UPLOAD_URL_PRO);
+        $hinh = strlen($up_hinh) > 0 ? $up_hinh : $_FILES['hinh']['name'];
+
         hh_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
         $items_hh = hh_select_page();
         $VIEW_NAME = "list.php";

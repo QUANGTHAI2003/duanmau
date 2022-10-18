@@ -1,23 +1,36 @@
-<?php
-require_once '../../global.php';
-require '../../dao/khach-hang.php';
-
-extract($_REQUEST);
-
-if (exist_param("update-pass")) {
-    $user_up = kh_select_by_id($ma_kh);
-    if ($user_up) {
-        if ($_POST['mat_khau'] != $_POST['mat_khau2']) {
-            $error = "Mật khẩu không khớp";
-            $VIEW_NAME = './change-pass.php';
-        } else {
-            if ($user_up['mat_khau'] != $_POST['mat_khau']) {
-                $error = "Mật khẩu cũ không đúng";
-                $VIEW_NAME = './change-pass.php';
-            } else {
-                kh_change_password($ma_kh, $_POST['mat_khau']);
-                $VIEW_NAME = './change-pass.php';
-            }
-        }
-    }
-}
+<section class="background">
+    <div class="content-bg">
+        <h3 class="title-bg">Thông tin tài khoản</h3>
+        <p>
+            <span class="bg-title">
+                <a href="./index.php">Trang chủ</a>
+            </span>
+            <i class="fa-solid fa-angle-right"></i>
+            <span class="page">
+                Thông tin tài khoản
+            </span>
+        </p>
+    </div>
+</section>
+<section class="account-info-container">
+    <?php include './menu.php'; ?>
+    <section class="w3l-mockup-form">
+        <div class="container">
+            <!-- /form -->
+            <div class="workinghny-form-grid">
+                <div class="main-mockup">
+                    <div class="content-wthree">
+                        <?= $msg ?>
+                        <h2>Change Password - <?= $ma_kh ?></h2>
+                        <form action="../change-pass.php?ma_kh=<?= $ma_kh ?>" method="post" style="max-width: 300px; display: flex; flex-direction: column; gap: 8px 0;">
+                            <input type="text" class="password" name="mat_khau" placeholder="Enter Your Password" required>
+                            <input type="text" class="confirm-password" name="mat_khau2" placeholder="Enter Your Confirm Password" required>
+                            <button name="update-pass" class="btn-change" type="submit">Change Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- //form -->
+        </div>
+    </section>
+</section>

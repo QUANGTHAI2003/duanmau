@@ -47,7 +47,7 @@
                             <a href="./index.php?btn_edit&ma_hh=<?= $ma_hh ?>">
                                 <button class="btn btn-update updateBtn">Sửa</button>
                             </a>
-                            <a onclick="alert('Bạn có chắc là sẽ xóa  <?= $ten_hh ?>')" href="./index.php?btn_delete&ma_hh=<?= $ma_hh ?>">
+                            <a onclick="confirm('Bạn có chắc là sẽ xóa <?= $ten_hh ?>');" href="./index.php?btn_delete&ma_hh=<?= $ma_hh ?>">
                                 <button class="btn btn-delete" name="delete">Xóa</button>
                             </a>
                         </div>

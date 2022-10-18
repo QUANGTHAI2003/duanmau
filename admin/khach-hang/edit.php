@@ -54,7 +54,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="ten">Hình</label>
-                                        <input type="file" name="hinh" class="form-control" value="<?= $hinh ?>">
+                                        <input type="hidden" name="hinh" class="form-control" value="<?= $hinh ?>">
+                                        <input type="file" name="up_hinh" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="ten">Kích hoạt</label>

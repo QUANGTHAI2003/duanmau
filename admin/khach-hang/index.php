@@ -11,9 +11,11 @@
         $ho_ten = isset($_POST['ho_ten']) ? $_POST['ho_ten'] : '';  
         $mat_khau = isset($_POST['mat_khau']) ? password_hash($_POST['mat_khau'], PASSWORD_DEFAULT) : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
-        $hinh = isset($_FILES['hinh']['name']) ? $_FILES['hinh']['name'] : '';
         $kich_hoat = isset($_POST['kich_hoat']) ? $_POST['kich_hoat'] : '';
         $vai_tro = isset($_POST['vai_tro']) ? $_POST['vai_tro'] : '';
+
+        $up_hinh = save_file("hinh", $UPLOAD_URL_USER);
+        $hinh = strlen($up_hinh) > 0 ? $up_hinh : "user.png";
 
         kh_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro);
         $items_kh = kh_selectAll();
@@ -34,9 +36,11 @@
         $ho_ten = isset($_POST['ho_ten']) ? $_POST['ho_ten'] : '';  
         $mat_khau = isset($_POST['mat_khau']) ? password_hash($_POST['mat_khau'], PASSWORD_DEFAULT) : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
-        $hinh = isset($_FILES['hinh']['name']) ? $_FILES['hinh']['name'] : '';
         $kich_hoat = isset($_POST['kich_hoat']) ? $_POST['kich_hoat'] : '';
         $vai_tro = isset($_POST['vai_tro']) ? $_POST['vai_tro'] : '';
+
+        $up_hinh = save_file("up_hinh", $UPLOAD_URL_USER);
+        $hinh = strlen($up_hinh) > 0 ? $up_hinh : $hinh;
         kh_update($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro);
         
         $items_kh = kh_selectAll();

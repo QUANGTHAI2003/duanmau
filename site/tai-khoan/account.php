@@ -8,11 +8,11 @@ extract($_REQUEST);
 if (exist_param('change-pass')) {
     $items_edit = kh_select_by_id($ma_kh);
     extract($items_edit);
-    $VIEW_NAME = './change-pass.php';
+    $VIEW_NAME = '../tai-khoan/change-pass-form.php';
 } elseif (exist_param('edit_info')) {
     $items_edit = kh_select_by_id($ma_kh);
     extract($items_edit);
-    $VIEW_NAME = './edit-account.php';
+    $VIEW_NAME = '../tai-khoan/edit-account.php';
 } elseif (exist_param('update_info')) {
     try {
         $ma_kh = isset($_POST['ma_kh']) ? $_POST['ma_kh'] : '';

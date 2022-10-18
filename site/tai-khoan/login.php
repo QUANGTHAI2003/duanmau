@@ -4,8 +4,10 @@ require '../../dao/pdo.php';
 require '../../dao/khach-hang.php';
 try {
     if (isset($_POST['login'])) {
-        if (empty($_POST['ma_kh']) || empty($_POST['mat_khau'])) {
-            $msg = "Email or Password is empty";
+        if (empty($_POST['ma_kh'])) {
+            $msg = "<div class='alert alert-danger'>Mã khách hàng không được để trống</div>";
+        } elseif (empty($_POST['mat_khau'])) {
+            $msg = "<div class='alert alert-danger'>Mật khẩu không được để trống</div>";
         } else {
             $ma_kh = $_POST['ma_kh'];
             $mat_khau = $_POST['mat_khau'];
@@ -17,15 +19,22 @@ try {
                     $_SESSION['vai_tro'] = $user['vai_tro'];
                     $_SESSION['login_success'] = 1;
                     if ($user['vai_tro'] == 1) {
+                        if (exist_param("ghi_nho")) {
+                            add_cookie("ma_kh", $user['ma_kh'], 30);
+                            add_cookie("mat_khau", $mat_khau, 30);
+                        } else {
+                            delete_cookie("ma_kh");
+                            delete_cookie("mat_khau");
+                        }
                         header("location: ../trang-chinh/index.php");
                     } else {
                         header("location: ../../admin/trang-chinh/index.php");
                     }
                 } else {
-                    $msg = "Mật khẩu không đúng";
+                    $msg = "<div class='alert alert-danger'>Mật khẩu không đúng</div>";
                 }
             } else {
-                $msg = "Mã khách hàng không tồn tại";
+                $msg = "<div class='alert alert-danger'>Mã khách hàng không tồn tại</div>";
             }
         }
     } else {

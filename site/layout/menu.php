@@ -28,7 +28,7 @@ if (isset($_SESSION['logout_success'])) { ?>
         </section>
         <section class="overlay"></section>
         <section class="search-box">
-            <form action="<?= $SITE_URL ?>/hang-hoa/liet-ke-ui.php" class="form" method="GET">
+            <form action="<?= $SITE_URL ?>/hang-hoa/liet-ke.php" class="form" method="GET">
                 <input type="text" name="keywords" <?= isset($_GET['keywords']) ? $_GET['keywords'] : "" ?> class="form-control search-input" id="input-search" aria-label="Tìm sản phẩm" placeholder="Bạn cần tìm gì?" autocomplete="off" autofocus onblur="this.value = ''">
                 <button type="submit" aria-label="Tìm Kiếm">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -46,15 +46,15 @@ if (isset($_SESSION['logout_success'])) { ?>
                 <section class="group">
                     <?php if (isset($_SESSION['ma_kh'])) { ?>
                         <p><?= $_SESSION['username'] ?></p>
-                        <a href="../tai-khoan/account.php?ma_kh=<?= $_SESSION['ma_kh'] ?>" class="btn">Tài khoản</a>
-                        <a href="../tai-khoan/logout.php" class="btn">Đăng xuất</a>
+                        <a href="<?= $SITE_URL ?>/tai-khoan/account.php?ma_kh=<?= $_SESSION['ma_kh'] ?>" class="btn">Tài khoản</a>
+                        <a href="<?= $SITE_URL ?>/tai-khoan/logout.php" class="btn">Đăng xuất</a>
                     <?php } else { ?>
-                        <a href="../tai-khoan/login-form.php" class="btn">Đăng nhập</a>
-                        <a href="../tai-khoan/register.php" class="btn">Đăng ký</a>
+                        <a href="<?= $SITE_URL ?>/tai-khoan/login-form.php" class="btn">Đăng nhập</a>
+                        <a href="<?= $SITE_URL ?>/tai-khoan/register.php" class="btn">Đăng ký</a>
                     <?php } ?>
                 </section>
             </section>
-            <section class="cart">
+            <!-- <section class="cart">
                 <section class="cart-item">
                     <ul class="list-item-cart">
                         <li class="item-cart">
@@ -87,28 +87,28 @@ if (isset($_SESSION['logout_success'])) { ?>
                         0
                     </span>
                 </a>
-            </section>
+            </section> -->
         </section>
     </section>
     <nav class="nav">
         <ul class="ul-main">
-            <li><a class="<?php if(exist_param('trang-chu')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh?trang-chu">Trang Chủ</a></li>
-            <li><a class="<?php if(exist_param('gioi-thieu')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?gioi-thieu">Giới Thiệu</a>
+            <li><a class="<?php if (exist_param('trang-chu')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh?trang-chu">Trang Chủ</a></li>
+            <li><a class="<?php if (exist_param('gioi-thieu')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?gioi-thieu">Giới Thiệu</a>
             </li>
             <li>
                 <section class="main-subnav">
-                    <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham" class="<?php if(exist_param('san-pham')) echo  'active' ?>">Sản phẩm</a>
-                    <i class="fa-solid fa-angle-down down <?php if(exist_param('san-pham')) echo  'active' ?>"></i>
+                    <a href="<?= $SITE_URL ?>/hang-hoa/liet-ke.php" class="<?php if (exist_param('san-pham')) echo  'active' ?>">Sản phẩm</a>
+                    <i class="fa-solid fa-angle-down down <?php if (exist_param('san-pham')) echo  'active' ?>"></i>
                     <ul class="subnav">
                         <li>
-                            <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham">
+                            <a href="<?= $SITE_URL ?>/hang-hoa/liet-ke.php">
                                 <i class="fa-solid fa-caret-right"></i>
                                 Tất cả
                             </a>
                         </li>
                         <?php foreach ($items_loai as $loai) { ?>
                             <li>
-                                <a href="<?= $SITE_URL ?>/trang-chinh/?san-pham&ma_loai=<?= $loai['ma_loai'] ?>">
+                                <a href="<?= $SITE_URL ?>/hang-hoa/liet-ke.php?ma_loai=<?= $loai['ma_loai'] ?>">
                                     <i class="fa-solid fa-caret-right"></i>
                                     <?= $loai['ten_loai'] ?>
                                 </a>
@@ -117,9 +117,9 @@ if (isset($_SESSION['logout_success'])) { ?>
                     </ul>
                 </section>
             </li>
-            <li><a class="<?php if(exist_param('tin-tuc')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?tin-tuc">Tin Tức</a>
+            <li><a class="<?php if (exist_param('tin-tuc')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?tin-tuc">Tin Tức</a>
             </li>
-            <li><a class="<?php if(exist_param('lien-he')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?lien-he">Liên hệ</a>
+            <li><a class="<?php if (exist_param('lien-he')) echo  'active' ?>" href="<?= $SITE_URL ?>/trang-chinh/?lien-he">Liên hệ</a>
             </li>
         </ul>
     </nav>

@@ -23,5 +23,5 @@
     }
 
     $VIEW_NAME = "hang-hoa/liet-ke-ui.php";
-    // require '../layout.php';
+    require '../layout.php';
 ?>

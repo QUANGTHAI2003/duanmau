@@ -52,7 +52,7 @@
         * @param int $day số ngày cookie tồn tại
     */
 
-    function add_cookie($name = null, $value, $day) {
+    function add_cookie($name, $value, $day) {
         setcookie($name, $value, time() + (86400 * $day), "/");
     }
 
@@ -71,8 +71,13 @@
         * @return string giá trị cookie
     */
 
+    // default value for $_COOKIE
     function get_cookie($name) {
-        return $_COOKIE[$name];
+        if(isset($_COOKIE[$name])) {
+            return $_COOKIE[$name];
+        } else {
+            return null;
+        }
     }
 
     /*
