@@ -27,8 +27,7 @@
                         <h2>Register Now</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php require_once '../../global.php' ?>
-                        <?= $msg = '';
-                        $msg ?>
+                        <?= $msg ?>
                         <form action="./register.php" method="POST" enctype="multipart/form-data">
                             <div class="form-ctn">
                                 <div class="form-left">

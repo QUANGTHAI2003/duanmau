@@ -36,3 +36,6 @@ if (exist_param('change-pass')) {
     $VIEW_NAME = './info.php';
 }
 require '../layout.php';
+
+?>
+

@@ -23,9 +23,15 @@
                         <?= $msg ?>
                         <h2>Change Password - <?= $ma_kh ?></h2>
                         <form action="../change-pass.php?ma_kh=<?= $ma_kh ?>" method="post" style="max-width: 300px; display: flex; flex-direction: column; gap: 8px 0;">
-                            <input type="text" class="password" name="mat_khau" placeholder="Enter Your Password" required>
-                            <input type="text" class="confirm-password" name="mat_khau2" placeholder="Enter Your Confirm Password" required>
-                            <button name="update-pass" class="btn-change" type="submit">Change Password</button>
+                            <div class="form-control">
+                                <input type="text" class="password" name="mat_khau" id="mat_khau" placeholder="Enter Your Password">
+                                <small></small>
+                            </div>
+                            <div class="form-control">
+                                <input type="text" class="confirm-password" name="mat_khau2" id="mat_khau2" placeholder="Enter Your Confirm Password">
+                                <small></small>
+                            </div>
+                            <button name="update-pass" class="btn-change" id="btnSubmit" type="submit">Change Password</button>
                         </form>
                     </div>
                 </div>
@@ -34,3 +40,12 @@
         </div>
     </section>
 </section>
+<script src="<?= $CONTENT_URL ?>/js/app.js"></script>
+<script>
+    form.addEventListener('keyup', function(e) {
+        e.preventDefault();
+        checkEmptyError(mat_khau, mat_khau2);
+        checkLength(mat_khau, 8, 20);
+        checkMatchPasswordError(mat_khau, mat_khau2);
+    });
+</script>

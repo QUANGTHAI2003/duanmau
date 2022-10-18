@@ -40,7 +40,7 @@
                             <div class="more-type">
                                 <label><input type="checkbox" name="ghi_nho" checked>Ghi nhớ tài khoản</label>
                                 <p>
-                                    <a href="forgot-password.php" style="margin-bottom: 15px; display: block; text-align: right;">Forgot Password?</a>
+                                    <a href="./quen-mk-form.php" style="margin-bottom: 15px; display: block; text-align: right;">Forgot Password?</a>
                                 </p>
                             </div>
                             <button name="login" class="btn enterbtn" id="btnSubmit" type="submit">Login</button>

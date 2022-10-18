@@ -26,17 +26,20 @@ function thong_ke_binh_luan()
     return pdo_query($sql);
 }
 
-function tk_hh() {
+function tk_hh()
+{
     $sql = "SELECT COUNT(*) FROM hang_hoa";
     return pdo_query_value($sql);
 }
 
-function tk_kh() {
+function tk_kh()
+{
     $sql = "SELECT COUNT(*) FROM khach_hang";
     return pdo_query_value($sql);
 }
 
-function tk_comment() {
+function tk_comment()
+{
     $sql = "SELECT COUNT(*) FROM binh_luan";
     return pdo_query_value($sql);
 }

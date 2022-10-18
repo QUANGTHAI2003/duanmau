@@ -19,21 +19,24 @@
             <h2 class="account-title">Cập nhật tài khoản</h2>
             <form action="./account.php" method="POST" class="account-update-form" enctype="multipart/form-data">
                 <div class="account-update-left">
-                    <div class="account-update-item">
+                    <div class="account-update-item form-control">
                         <label for="username" class="account-update-label">Tên đăng nhập</label>
-                        <input type="text" name="ma_kh" id="username" class="account-update-input" value="<?= $ma_kh ?>">
+                        <input type="text" name="ma_kh" id="ma_kh" class="account-update-input" value="<?= $ma_kh ?>">
+                        <small></small>
                     </div>
-                    <div class="account-update-item">
+                    <div class="account-update-item form-control">
                         <label for="username" class="account-update-label">Họ và tên</label>
-                        <input type="text" name="ho_ten" id="username" class="account-update-input" value="<?= $ho_ten ?>">
+                        <input type="text" name="ho_ten" id="ho_ten" class="account-update-input" value="<?= $ho_ten ?>">
+                        <small></small>
                     </div>
                 </div>
                 <div class="account-update-right">
-                    <div class="account-update-item">
+                    <div class="account-update-item form-control">
                         <label for="username" class="account-update-label">Email</label>
-                        <input type="text" name="email" id="username" class="account-update-input" value="<?= $email ?>">
+                        <input type="text" name="email" id="email" class="account-update-input" value="<?= $email ?>">
+                        <small></small>
                     </div>
-                    <div class="account-update-item">
+                    <div class="account-update-item form-control">
                         <label for="username" class="account-update-label">Hình</label>
                         <input type="file" name="hinh" id="username" class="account-update-input" value="<?= $hinh ?>">
                         <?= $hinh ?>
@@ -42,7 +45,7 @@
                     <input type="hidden" name="vai_tro" value="<?= $vai_tro ?>">
                     <input type="hidden" name="kich_hoat" value="<?= $kich_hoat ?>">
                 </div>
-                <button type="submit" name="update_info">Cập nhật</button>
+                <button type="submit" name="update_info" id="btnSubmit">Cập nhật</button>
             </form>
         </div>
     </div>

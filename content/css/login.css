@@ -532,14 +532,17 @@ p.copy-footer-29 a:hover {
 .form-control.error input {
     border-bottom: 2px solid #e74c3c;
     transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 .form-control.success input {
     border-bottom: 2px solid #00c16e;
     transition: all 0.2s ease-in-out;
-}
-
-.btnSubmit {
-    background-color: #ccc;
-    cursor: not-allowed;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
