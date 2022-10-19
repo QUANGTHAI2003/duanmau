@@ -9,3 +9,12 @@ admin
 ```
 administrator
 ```
+# Tài khoản User
+* Tên đăng nhập:
+```
+quangthai
+```
+* Mật khẩu
+```
+12345678
+```
