@@ -25,6 +25,7 @@
                 </button>
             </div>
         </div>
+        <?= $msg ?>
         <div class="activity-product">
             <div class="title-product">
                 <div class="title-pro name">Tên sản phẩm</div>
@@ -40,7 +41,7 @@
             ?>
                     <div class="list-product" style="align-items: center;">
                         <div class="name"><?= $ten_hh ?></div>
-                        <div class="image"><img src="<?= $UPLOAD_URL_PRO ?><?= $hinh ?>" alt=""></div>
+                        <div class="image"><img src="<?= $UPLOAD_URL_PRO ?><?= $hinh ?>" loading="lazy" alt="<?= $ten_hh ?>"></div>
                         <div class="qty"><?= number_format($don_gia, 0, ',', '.') . 'đ' ?></div>
                         <div class="price"><?= $ngay_nhap ?></div>
                         <div class="func">
@@ -65,3 +66,9 @@
 </div>
 </div>
 </div>
+<script src="<?= $CONTENT_URL ?>/js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.alert').delay(3000).slideUp(400, 'linear');
+    });
+</script>

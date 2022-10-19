@@ -821,10 +821,12 @@ nav.close~.dashboard .top {
     margin-left: 12px;
 }
 
-.add-product-body form .form-right .form-check {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.add-product-body form .form-right .form-check,
+.add-user-body form .form-check,
+.add-user-body form .form-control-status,
+.add-user-body form .form-control-role {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .add-product-body form .form-right .form-check label,
@@ -1268,4 +1270,71 @@ i,
 
 .hidden-xs-up {
     display: none !important;
+}
+
+.form-control.error small {
+    color: #e74c3c;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.form-control.error input {
+    border-bottom: 2px solid #e74c3c !important;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.form-control.success input {
+    border-bottom: 2px solid #00c16e;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.form_user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 40px;
+    margin-bottom: 16px;
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    margin: 1rem 0;
+}
+
+.alert-success {
+    background-color: #42ba96;
+}
+
+.alert-danger {
+    background-color: #fc5555;
+}
+
+.alert-info {
+    background-color: #2E9AFE;
+}
+
+.alert-warning {
+    background-color: #ff9966;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }

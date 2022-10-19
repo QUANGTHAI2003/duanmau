@@ -28,7 +28,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php require_once '../../global.php' ?>
                         <?= $msg ?>
-                        <form action="./register.php" method="POST" enctype="multipart/form-data">
+                        <form action="./register.php" id="form" method="POST" enctype="multipart/form-data">
                             <div class="form-ctn">
                                 <div class="form-left">
                                     <div class="form-control">

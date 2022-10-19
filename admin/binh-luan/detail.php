@@ -17,7 +17,7 @@
                 <span class="text">Comments Management</span>
             </div>
         </div>
-
+        <?= $msg ?>
         <div class="activity-detail">
             <div class="title-detail">
                 <div class="title-pro name">
@@ -31,22 +31,19 @@
             <?php
             if (is_array($items_detail) || is_object($items_detail)) {
                 foreach ($items_detail as $bl) {
-                    extract($bl);
             ?>
                     <div class="list-detail">
                         <div class="name">
-                            <input type="checkbox" name="checkBox" value="checkbox<?= $ma_hh ?>" id="">
+                            <input type="checkbox" name="checkBox" value="checkbox<?= $bl['ma_hh'] ?>" id="">
                         </div>
                         <div class="name text">
-                            <?= $noi_dung ?>
+                            <?= $bl['noi_dung'] ?>
                         </div>
-                        <div class="image"><?= $ngay_bl ?></div>
-                        <div class="qty"><?= $ma_kh ?></div>
+                        <div class="image"><?= $bl['ngay_bl'] ?></div>
+                        <div class="qty"><?= $bl['ma_kh'] ?></div>
                         <div class="func">
-                            <a href="./index.php?btn_delete&ma_bl=<?= $ma_bl ?>">
-                                <button class="btn btn-delete">
-                                    Xóa
-                                </button>
+                            <a onclick="confirm('Bạn có chắc chắn muốn xóa không')" href="./index.php?btn_delete&ma_bl=<?= $bl['ma_kh'] ?>">
+                                <button class="btn btn-delete">Xóa</button>
                             </a>
                         </div>
                     </div>

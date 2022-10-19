@@ -29,7 +29,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php require_once '../../global.php' ?>
                         <?= $msg ?>
-                        <form action="./quen-mk.php" method="POST">
+                        <form action="./quen-mk.php" id="form" method="POST">
                             <div class="form-control">
                                 <input type="text" id="ma_kh" class="name" name="ma_kh" placeholder="Tên đăng nhập" value="">
                                 <small></small>

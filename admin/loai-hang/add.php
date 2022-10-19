@@ -27,6 +27,7 @@
             <div class="add-cate">
                 <div class="add-cate-inner" style="width: 500px;">
                     <div class="add-cate-body">
+                        <?= $msg ?>
                         <form action="./index.php?btn_insert" method="POST">
                             <div class="form_cate">
                                 <div class="form-group">

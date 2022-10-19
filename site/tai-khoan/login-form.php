@@ -10,9 +10,30 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+    <style>
+        #pageloader {
+            background: rgba(255, 255, 255, 0.8);
+            display: none;
+            height: 100%;
+            position: fixed;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        #pageloader img {
+            left: 50%;
+            margin-left: -32px;
+            margin-top: -32px;
+            position: absolute;
+            top: 50%;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="pageloader">
+        <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
+    </div>
     <section class="w3l-mockup-form">
         <div class="container">
             <!-- /form -->
@@ -28,7 +49,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         <?php require_once '../../global.php' ?>
                         <?= $msg ?>
-                        <form action="./login.php" method="POST">
+                        <form action="./login.php" id="form" method="POST">
                             <div class="form-control">
                                 <input type="text" class="email" name="ma_kh" id="ma_kh" placeholder="Enter Your Username" value="<?= get_cookie('ma_kh') ?>">
                                 <small></small>
@@ -61,6 +82,12 @@
             checkLength(ma_kh, 5, 15);
             checkLength(mat_khau, 8, 20);
             checkLength(ho_ten, 5, 20);
+        });
+
+        $(document).ready(function() {
+            $("#form").on("submit", function() {
+                $("#pageloader").fadeIn();
+            });
         });
     </script>
 </body>

@@ -24,6 +24,7 @@
                     </button>
                 </div>
             </div>
+            <?= $msg ?>
             <div class="activity-user">
                 <div class="title-user">
                     <div class="title-pro name">Mã KH</div>
@@ -48,7 +49,7 @@
                                 <a href="./index.php?btn_edit&ma_kh=<?= $ma_kh ?>">
                                     <button class="btn btn-update updateBtn">Sửa</button>
                                 </a>
-                                <a href="./index.php?btn_delete&ma_kh=<?= $ma_kh ?>">
+                                <a onclick="confirm('Bạn có chắc chắn muốn xóa không')" href="./index.php?btn_delete&ma_kh=<?= $ma_kh ?>">
                                     <button class="btn btn-delete" name="delete">Xóa</button>
                                 </a>
                             </div>
@@ -59,3 +60,9 @@
         </div>
     </div>
 </div>
+<script src="<?= $CONTENT_URL ?>/js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.alert').delay(3000).slideUp(400, 'linear');
+    });
+</script>

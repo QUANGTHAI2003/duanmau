@@ -3,9 +3,13 @@ const pass = document.querySelector('#mat_khau');
 const cfpass = document.querySelector('#mat_khau2');
 const email = document.querySelector('#email');
 const nameEle = document.querySelector('#ho_ten');
-const form = document.querySelector('form');
+const form = document.querySelector('#form');
 const btnSubmit = document.querySelector('#btnSubmit');
 const imageInput = document.querySelector('#imageUpload');
+const selectEle = document.querySelector('#danh_muc')
+const don_gia = document.querySelector('#don_gia');
+
+console.log(username, pass, cfpass, email, nameEle, form, btnSubmit, imageInput);
 
 function showSuccess(input) {
     const formControl = input.parentElement;
@@ -88,5 +92,19 @@ function checkMatchPasswordError(passInput, cfpassInput) {
         return true;
     } else {
         return false;
+    }
+}
+
+function checkSelected(input) {
+    var selectedValue = input.options[input.selectedIndex].value;
+    if (selectedValue == "selectcard") {
+        showError(input, 'Vui lòng chọn danh mục');
+    }
+}
+
+function checkInputNumber(input) {
+    var regexNumber = /^[0-9]+$/;
+    if (!regexNumber.test(input.value)) {
+        showError(input, 'Vui lòng nhập số');
     }
 }
