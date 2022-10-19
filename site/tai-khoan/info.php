@@ -17,7 +17,6 @@
     <div class="account-content-container">
         <div class="account-content">
             <div class="account-profile">
-                <div class="profile-title">Profile Image</div>
                 <div class="profile-img">
                     <img src="<?= $IMAGES_URL_USER ?>/<?= $hinh ?>" alt="">
                 </div>

@@ -22,8 +22,8 @@
             <div class="title-analytics">
                 <div class="title-pro name">Loại hàng</div>
                 <div class="title-pro image">Số lượng</div>
-                <div class="title-pro price">Giá cao nhất</div>
                 <div class="title-pro status">Giá thấp nhất</div>
+                <div class="title-pro price">Giá cao nhất</div>
                 <div class="title-pro func">Giá trung binh</div>
             </div>
         </div>

@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="form-control form-group">
                                         <label for="ten">Hình</label>
-                                        <input type="file" name="hinh">
+                                        <input type="file" name="hinh" accept=".jpg, .jpeg, .png, .svg">
                                         <small></small>
                                     </div>
                                     <div class="form-control form-group">

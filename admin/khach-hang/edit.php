@@ -63,7 +63,7 @@
                                         <label for="ten">Hình</label>
                                         <input type="hidden" name="hinh" class="form-control" value="<?= $hinh ?>">
                                         <small></small>
-                                        <input type="file" name="up_hinh" class="form-control">
+                                        <input type="file" name="up_hinh" class="form-control" accept=".jpg, .jpeg, .png, .svg">
                                         <small></small>
                                     </div>
                                     <div class="form-control form-group">

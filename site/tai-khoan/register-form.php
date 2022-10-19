@@ -15,7 +15,7 @@
 
 <body>
     <section class="w3l-mockup-form">
-        <div class="container">
+        <div class="container" style="max-width: 1200px;">
             <div class="workinghny-form-grid">
                 <div class="main-mockup">
                     <div class="w3l_form align-self">
@@ -29,7 +29,7 @@
                         <?php require_once '../../global.php' ?>
                         <?= $msg ?>
                         <form action="./register.php" id="form" method="POST" enctype="multipart/form-data">
-                            <div class="form-ctn">
+                            <div class="form-ctn" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 16px">
                                 <div class="form-left">
                                     <div class="form-control">
                                         <input type="text" id="ma_kh" class="name" name="ma_kh" placeholder="Tên đăng nhập" value="">

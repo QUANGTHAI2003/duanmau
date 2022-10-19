@@ -22,16 +22,18 @@
                     <div class="content-wthree">
                         <?= $msg ?>
                         <h2>Change Password - <?= $ma_kh ?></h2>
-                        <form action="../change-pass.php?ma_kh=<?= $ma_kh ?>" method="post" style="max-width: 300px; display: flex; flex-direction: column; gap: 8px 0;">
-                            <div class="form-control">
-                                <input type="text" class="password" name="mat_khau" id="mat_khau" placeholder="Enter Your Password">
-                                <small></small>
+                        <form action="../change-pass.php?ma_kh=<?= $ma_kh ?>" id="form" class="form-change" method="POST">
+                            <div class="form-form">
+                                <div class="form-control">
+                                    <input type="text" class="password" name="mat_khau" id="mat_khau" placeholder="Enter Your Password">
+                                    <small></small>
+                                </div>
+                                <div class="form-control">
+                                    <input type="text" class="confirm-password" name="mat_khau2" id="mat_khau2" placeholder="Enter Your Confirm Password">
+                                    <small></small>
+                                </div>
                             </div>
-                            <div class="form-control">
-                                <input type="text" class="confirm-password" name="mat_khau2" id="mat_khau2" placeholder="Enter Your Confirm Password">
-                                <small></small>
-                            </div>
-                            <button name="update-pass" class="btn-change" id="btnSubmit" type="submit">Change Password</button>
+                            <button name="update-pass" class="btn-change btn" id="btnSubmit" type="submit">Change Password</button>
                         </form>
                     </div>
                 </div>

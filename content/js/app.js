@@ -1,3 +1,5 @@
+//  Check input form when submit 
+
 const username = document.querySelector('#ma_kh');
 const pass = document.querySelector('#mat_khau');
 const cfpass = document.querySelector('#mat_khau2');
@@ -8,8 +10,6 @@ const btnSubmit = document.querySelector('#btnSubmit');
 const imageInput = document.querySelector('#imageUpload');
 const selectEle = document.querySelector('#danh_muc')
 const don_gia = document.querySelector('#don_gia');
-
-console.log(username, pass, cfpass, email, nameEle, form, btnSubmit, imageInput);
 
 function showSuccess(input) {
     const formControl = input.parentElement;
@@ -108,3 +108,27 @@ function checkInputNumber(input) {
         showError(input, 'Vui lòng nhập số');
     }
 }
+
+// Tick all input checkbox
+function toogleCheckBox(source) {
+    var checkboxes = document.getElementsByName('checkBox');
+    lengthCheckBox = checkboxes.length;
+    for (let i = 0; i < lengthCheckBox; i++) {
+        checkboxes[i].checked = source.checked;
+    }
+}
+
+// Show and hide sidebar  
+const body = document.querySelector("body"),
+    modeToggle = body.querySelector(".mode-toggle");
+sidebar = body.querySelector("nav");
+sidebarToggle = body.querySelector(".sidebar-toggle");
+
+sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+    if (sidebar.classList.contains("close")) {
+        localStorage.setItem("status", "close");
+    } else {
+        localStorage.setItem("status", "open");
+    }
+})

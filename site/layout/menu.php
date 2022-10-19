@@ -35,7 +35,7 @@ if (isset($_SESSION['logout_success'])) { ?>
                 </button>
             </form>
             <div class="search-suggest">
-                <div id="search-result">
+            <div id="search-result">
 
                 </div>
             </div>
@@ -145,15 +145,5 @@ if (isset($_SESSION['logout_success'])) { ?>
         if (e.keyCode == 191) {
             searchInput.value = null;
         }
-    })
-
-    let items = document.querySelectorAll('.ul-main li');
-    items.forEach(li => {
-        li.addEventListener('click', function() {
-            items.forEach(item_remove_active => {
-                item_remove_active.classList.remove('active');
-            })
-            this.classList.add('.active');
-        })
     })
 </script>

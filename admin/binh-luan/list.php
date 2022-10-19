@@ -47,13 +47,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    function toogleCheckBox(source) {
-        var checkboxes = document.getElementsByName('checkBox');
-        lengthCheckBox = checkboxes.length;
-        for (var i = 0; i < lengthCheckBox; i++) {
-            checkboxes[i].checked = source.checked;
-        }
-    }
-</script>

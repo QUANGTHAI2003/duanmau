@@ -99,7 +99,6 @@
         <?php include './hang-cung-loai.php' ?>
     </div>
 </section>
-
-<!-- <script src="./js/cart.js"></script> -->
-<script src="./js/app.js"></script>
-<script src="./js/modalOpen.js"></script>
+<script>
+    console.log("Số lượt xem: " + <?= $so_luot_xem ?>);
+</script>

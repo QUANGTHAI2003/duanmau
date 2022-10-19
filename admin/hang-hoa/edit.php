@@ -57,7 +57,7 @@
                                         <label for="img">Ảnh sản phẩm</label>
                                         <input type="hidden" name="hinh" id="img" value="<?= $hinh ?>" />
                                         <small></small>
-                                        <input type="file" name="up_hinh" id="img" />
+                                        <input type="file" name="up_hinh" id="img" accept=".jpg, .jpeg, .png, .svg" />
                                         <small></small>
                                         (<?= $hinh ?>)
                                     </div>
