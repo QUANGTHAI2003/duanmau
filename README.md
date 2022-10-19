@@ -1,4 +1,4 @@
-# Tại khoản Admin
+# Tài khoản Admin
 
 * Tên đăng nhập:
 ```
