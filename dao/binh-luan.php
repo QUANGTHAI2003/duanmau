@@ -43,7 +43,7 @@ function bl_exist($ma_bl)
 
 function bl_select_by_hh($ma_hh)
 {
-    $sql = "SELECT hh.ma_hh, kh.hinh, bl.noi_dung, kh.ho_ten, bl.ngay_bl, kh.ma_kh 
+    $sql = "SELECT hh.ma_hh, kh.hinh, bl.noi_dung, kh.ho_ten, bl.ngay_bl, kh.ma_kh, bl.ma_bl 
                 FROM hang_hoa hh 
                 JOIN binh_luan bl ON hh.ma_hh = bl.ma_hh 
                 JOIN khach_hang kh ON bl.ma_kh = kh.ma_kh 
