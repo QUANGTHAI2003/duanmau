@@ -10,30 +10,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
-    <style>
-        #pageloader {
-            background: rgba(255, 255, 255, 0.8);
-            display: none;
-            height: 100%;
-            position: fixed;
-            width: 100%;
-            z-index: 9999;
-        }
-
-        #pageloader img {
-            left: 50%;
-            margin-left: -32px;
-            margin-top: -32px;
-            position: absolute;
-            top: 50%;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    <div id="pageloader">
-        <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
-    </div>
     <section class="w3l-mockup-form">
         <div class="container">
             <!-- /form -->
@@ -84,11 +64,23 @@
             checkLength(ho_ten, 5, 20);
         });
 
-        $(document).ready(function() {
-            $("#form").on("submit", function() {
-                $("#pageloader").fadeIn();
-            });
-        });
+        // Add load when submit form
+        // $(document).ready(function() {
+        //     $("#form").on("submit", (e) => {
+        //         e.preventDefault();
+        //         var spinner = '<div class="spinner-border" role="status"><div class="dots"></div></div>';
+        //         $("#btnSubmit").html(spinner);
+        //         var formData = new FormData(document.getElementById("form"));
+        //         $.ajax({
+        //             url: "./login.php",
+        //             data: formData,
+        //             processData: false,
+        //             contentType: false
+        //         }).done(function(res) {
+        //             $("#btnSubmit").html("Login");
+        //         })
+        //     })
+        // })
     </script>
 </body>
 

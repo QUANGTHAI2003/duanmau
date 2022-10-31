@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="form-control form-group">
                                         <label for="img">Ảnh sản phẩm</label>
-                                        <input type="file" name="hinh" id="img" accept=".jpg, .jpeg, .png, .svg" />
+                                        <input type="file" name="hinh" id="img" accept=".jpg, .jpeg, .png, .svg, .webp" />
                                         <small></small>
                                     </div>
                                 </div>

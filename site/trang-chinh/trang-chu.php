@@ -241,7 +241,7 @@
         </section>
         <!-- Best seller section -->
         <section class="product-list">
-            <h2 class="text-gradient">SẢN PHẨM ĐẶC BIỆT</h2>
+            <h2 class="text-gradient">SẢN PHẨM ĐƯỢC QUAN TÂM</h2>
             <section class="product-list-container grids" style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px;">
                 <?php foreach ($items_top as $top) { ?>
                     <a href="../hang-hoa/chi-tiet.php?ma_hh=<?= $top['ma_hh'] ?>" style="text-decoration:none">

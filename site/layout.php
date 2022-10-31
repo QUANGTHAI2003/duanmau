@@ -8,6 +8,7 @@
     <title>Trang chủ</title>
     <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/reset.css">
     <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/style.css">
+    <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/loading.css">
     <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/responsive.css">
     <link rel="icon" href="<?= $IMAGES_URL ?>/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
@@ -18,6 +19,8 @@
 </head>
 
 <body>
+    <?php include '../layout/loading.php' ?>
+
     <?php include '../layout/menu.php' ?>
     <section class="container">
         <?php include $VIEW_NAME ?>

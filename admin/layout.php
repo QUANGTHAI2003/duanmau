@@ -1,9 +1,3 @@
-<?php 
-    session_start();
-    if(!isset($_SESSION['ma_kh'])){
-        header("location: ../../site/trang-chinh/");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 

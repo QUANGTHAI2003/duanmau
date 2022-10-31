@@ -115,7 +115,7 @@
     function showLoginSuccessToast() {
         toast({
             title: "Đăng nhập thành công!",
-            message: "Chào mừng <b><?= $_SESSION['username'] ?></b> với website của chúng tôi",
+            message: "Chào mừng <b><?= $_SESSION['username'] ?? '' ?></b> với website của chúng tôi",
             type: "success",
             duration: 5000
         });
